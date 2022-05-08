@@ -50,16 +50,6 @@ import {
 } from '../assets/index'
 
 const CharactersGenshin = [
-  // Template
-  // {
-  //   id: 0,
-  //   name: '',
-  //   vision: '',
-  //   weapon: '',
-  //   birthday: '',
-  //   image:
-  //     ''
-  // }
   {
     id: 0,
     name: 'Kamisato Ayaka',
@@ -72,8 +62,8 @@ const CharactersGenshin = [
     desc: 'Ela é a filha mais velha do clã Kamisato e irmã mais nova de Kamisato Ayato. Sendo bonitas, elegantes e graciosas, as pessoas comuns não têm nada para falar mal de Ayaka. Por causa de seu status social dela como a filha mais velha do Clã Kamisato da Comissão Yashiro e como Shirasagi Himegimi, Ayaka é vista como um modelo de perfeição.',
     skills: [
       {
-        id: 1,
-        name: 'Normal Attack',
+        id: 0,
+        name: 'Kamisato Art: Kabuki',
         key: 'Auto-Attack',
         desc: 'Executa até 5 golpes rápidos.'
       },
@@ -105,7 +95,28 @@ const CharactersGenshin = [
     birthday: '26/03',
     stars: 5,
     region: 'Inazuma',
-    image: KamisatoAyatoImage
+    image: KamisatoAyatoImage,
+    desc: 'Ele é o atual chefe do clã Kamisato, o irmão mais velho de Kamisato Ayaka e o Comissário Yashiro.',
+    skills: [
+      {
+        id: 0,
+        name: 'Kamisato Art: Marobashi',
+        key: 'Auto-Attack',
+        desc: 'Executa até 5 golpes rápidos.'
+      },
+      {
+        id: 1,
+        name: 'Kamisato Art: Kyouka',
+        key: 'E',
+        desc: 'Kamisato Ayato muda de posição e entra no estado Takimeguri Kanka. Após essa mudança, ele deixará uma ilusão aquosa em seu local original. Depois de formada, a ilusão aquosa explodirá se os oponentes estiverem próximos ou após o término de sua duração, causando AoE Hydro DMG.'
+      },
+      {
+        id: 2,
+        name: 'Kamisato Art: Suiyuu',
+        key: 'Q',
+        desc: 'Desvenda um jardim de pureza que silencia a cacofonia interior. Enquanto este espaço existir, Bloomwater Blades irá constantemente chover e atacar oponentes dentro de seu AoE, causando Hydro DMG e aumentando o DMG de Ataque Normal dos personagens dentro.'
+      }
+    ]
   },
   {
     id: 2,
@@ -115,7 +126,27 @@ const CharactersGenshin = [
     birthday: '27/06',
     stars: 5,
     region: 'Inazuma',
-    image: YaeMikoImage
+    image: YaeMikoImage,
+    skills: [
+      {
+        id: 0,
+        name: 'Spiritfox Sin-Eater',
+        key: 'Auto-Attack',
+        desc: 'Evoca espíritos kitsune, iniciando um máximo de 3 ataques que causam Electro DMG.'
+      },
+      {
+        id: 1,
+        name: 'Yakan Evocation: Sesshou Sakura',
+        key: 'E',
+        desc: 'Para Yae, as tarefas monótonas que podem ser realizadas expulsando os espíritos não precisam ser feitas pessoalmente. Move-se rapidamente, deixando um Sesshou Sakura para trás.'
+      },
+      {
+        id: 2,
+        name: 'Great Secret Art: Tenko Kenshin',
+        key: 'Q',
+        desc: 'Lendas de "kitsunetsuki", ou as manifestações do poder de um kitsune, são comuns nos contos folclóricos de Inazuma. Um que particularmente captura a imaginação é o do Sky Kitsune, que diz fazer com que os raios caiam sobre os inimigos do Grande Santuário Narukami. Invoca um relâmpago, causando AoE Electro DMG.'
+      }
+    ]
   },
   {
     id: 3,
