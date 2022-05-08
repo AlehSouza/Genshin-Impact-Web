@@ -2,6 +2,7 @@
   <div id="app">
     <nav>
       <router-link to="/">Home</router-link> |
+      <router-link to="/map">Map</router-link> |
       <router-link to="/about">About</router-link>
     </nav>
     <router-view/>
@@ -18,13 +19,11 @@
   text-align: center;
   color: #2c3e50;
 }
-
 html, body{
   overflow-x: hidden;
+  margin: 0px;
+  padding: 0px;
 }
-#app {
-}
-
 nav {
   padding: 30px;
 

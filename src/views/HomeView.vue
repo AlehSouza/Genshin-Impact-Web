@@ -16,3 +16,9 @@ export default {
   }
 }
 </script>
+
+<style>
+ .home{
+   margin: auto;
+ }
+</style>

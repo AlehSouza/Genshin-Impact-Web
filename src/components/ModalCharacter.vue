@@ -1,7 +1,7 @@
 <template>
   <div class="modais-container">
     <div class="modal-btn">
-      <button @click="showCharacter(personagem)">Detalhes</button>
+      <button @click="showCharacter(personagem)">Resumo</button>
     </div>
     <div class="modal-container" :id="'modal'+personagem.id">
         <div class="modal-sub-container">
@@ -18,6 +18,7 @@
             <span>Estrelas: {{personagem.stars}}</span>
             <span>Região: {{personagem.region}}</span>
           </div>
+          <button class="modal-details" @click="redirectToPage(personagem.id)">Ver mais detalhes</button>
         </div>
     </div>
   </div>
@@ -47,6 +48,9 @@ export default {
         document.getElementById('modal' + personagem.id).style.display = 'none'
         document.getElementById('app').style.overflow = 'auto'
       }
+    },
+    redirectToPage (x) {
+      this.$router.push('/characterview/' + x)
     }
   }
 }
@@ -58,10 +62,10 @@ export default {
 .modal-btn{
   width: 200px;
   button{
-    background-color: var(--secondary-color);
+    background-color: var(--tertiary-color);
     color: var(--white-color);
     width: 100%;
-    padding: 12px;
+    padding: 15px;
     border-radius: 0px;
     border: 0px;
     font-weight: bold;
@@ -86,8 +90,7 @@ export default {
 }
 .modal-sub-container{
   width: 500px;
-  padding-bottom: 15px;
-  background-color: white;
+  background-color: var(--white-color);
   border-radius: 8px;
   flex-direction: column;
   display: flex;
@@ -116,5 +119,14 @@ export default {
   span{
     text-align: left;
   }
+}
+.modal-details{
+  padding: 12px;
+  background-color: var(--tertiary-color);
+  color: var(--white-color);
+  text-transform: uppercase;
+  border: 0px;
+  cursor: pointer;
+  font-weight: bold;
 }
 </style>

@@ -1,3 +1,4 @@
+// import Image from './banner_characters/.webp'
 import KamisatoAyakaImage from './banner_characters/KamisatoAyaka.webp'
 import KamisatoAyatoImage from './banner_characters/KamisatoAyato.webp'
 import YaeMikoImage from './banner_characters/YaeMiko.webp'
@@ -7,7 +8,6 @@ import AratakiIttoImage from './banner_characters/AratakiItto.webp'
 import BarbaraImage from './banner_characters/Barbara.webp'
 import BeidouImage from './banner_characters/Beidou.webp'
 import BennettImage from './banner_characters/Bennett.webp'
-// import Image from './banner_characters/.webp'
 import ChongyunImage from './banner_characters/Chongyun.webp'
 import DilucImage from './banner_characters/Diluc.webp'
 import DionaImage from './banner_characters/Diona.webp'
@@ -46,6 +46,7 @@ import YoimiyaImage from './banner_characters/Yoimiya.webp'
 import YunJinImage from './banner_characters/YunJin.webp'
 import ZhongliImage from './banner_characters/Zhongli.webp'
 import TravelerImage from './banner_characters/Traveler.webp'
+import YelanImage from './banner_characters/Yelan.webp'
 
 export {
   KamisatoAyakaImage,
@@ -94,5 +95,6 @@ export {
   YoimiyaImage,
   YunJinImage,
   ZhongliImage,
+  YelanImage,
   TravelerImage
 }

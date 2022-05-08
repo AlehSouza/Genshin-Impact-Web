@@ -45,6 +45,7 @@ import {
   YoimiyaImage,
   YunJinImage,
   ZhongliImage,
+  YelanImage,
   TravelerImage
 } from '../assets/index'
 
@@ -67,7 +68,33 @@ const CharactersGenshin = [
     birthday: '28/09',
     stars: 5,
     region: 'Inazuma',
-    image: KamisatoAyakaImage
+    image: KamisatoAyakaImage,
+    skills: [
+      {
+        id: 1,
+        name: 'Normal Attack',
+        key: 'Auto-Attack',
+        desc: 'Performs up to 5 rapid strikes.'
+      },
+      {
+        id: 1,
+        name: 'Kamisato Art: Hyouka',
+        key: 'E',
+        desc: 'Summons blooming ice to launch nearby opponents, dealing '
+      },
+      {
+        id: 2,
+        name: 'Kamisato Art: Senho',
+        key: 'Dash',
+        desc: "Ayaka consumes Stamina and cloaks herself in a frozen fog that moves with her. In Senho form, she moves swiftly upon water. When she reappears, the following effects occur: • Ayaka unleashes frigid energy to apply Cryo on nearby opponents. • Coldness condenses around Ayaka's blade, infusing her attacks with Cryo for a brief period."
+      },
+      {
+        id: 3,
+        name: 'Kamisato Art: Soumetsu',
+        key: 'Q',
+        desc: 'Summons forth a snowstorm with flawless poise, unleashing a Frostflake Seki no To that moves forward continuously.'
+      }
+    ]
   },
   {
     id: 1,
@@ -521,6 +548,16 @@ const CharactersGenshin = [
   },
   {
     id: 46,
+    name: 'Yelan',
+    vision: 'Hydro',
+    weapon: 'Bow',
+    birthday: '',
+    stars: 5,
+    region: '',
+    image: YelanImage
+  },
+  {
+    id: 47,
     name: 'Traveler',
     vision: 'None',
     weapon: 'Sword',
