@@ -520,7 +520,7 @@ const CharactersGenshin = [
     image: ZhongliImage
   },
   {
-    id: 41,
+    id: 46,
     name: 'Traveler',
     vision: 'None',
     weapon: 'Sword',
