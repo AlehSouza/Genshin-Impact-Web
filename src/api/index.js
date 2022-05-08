@@ -69,30 +69,31 @@ const CharactersGenshin = [
     stars: 5,
     region: 'Inazuma',
     image: KamisatoAyakaImage,
+    desc: 'Ela é a filha mais velha do clã Kamisato e irmã mais nova de Kamisato Ayato. Sendo bonitas, elegantes e graciosas, as pessoas comuns não têm nada para falar mal de Ayaka. Por causa de seu status social dela como a filha mais velha do Clã Kamisato da Comissão Yashiro e como Shirasagi Himegimi, Ayaka é vista como um modelo de perfeição.',
     skills: [
       {
         id: 1,
         name: 'Normal Attack',
         key: 'Auto-Attack',
-        desc: 'Performs up to 5 rapid strikes.'
+        desc: 'Executa até 5 golpes rápidos.'
       },
       {
         id: 1,
         name: 'Kamisato Art: Hyouka',
         key: 'E',
-        desc: 'Summons blooming ice to launch nearby opponents, dealing '
+        desc: 'Evoca gelo florescente para lançar oponentes próximos, causando dano'
       },
       {
         id: 2,
         name: 'Kamisato Art: Senho',
         key: 'Dash',
-        desc: "Ayaka consumes Stamina and cloaks herself in a frozen fog that moves with her. In Senho form, she moves swiftly upon water. When she reappears, the following effects occur: • Ayaka unleashes frigid energy to apply Cryo on nearby opponents. • Coldness condenses around Ayaka's blade, infusing her attacks with Cryo for a brief period."
+        desc: 'Ayaka consome Stamina e se cobre em uma névoa congelada que se move com ela. Na forma de Senho, ela se move rapidamente sobre a água. Quando ela reaparece, ocorrem os seguintes efeitos: Ayaka libera energia frígida para aplicar Cryo em oponentes próximos. A frieza se condensa ao redor da lâmina de Ayaka, infundindo seus ataques com Cryo por um breve período.'
       },
       {
         id: 3,
         name: 'Kamisato Art: Soumetsu',
         key: 'Q',
-        desc: 'Summons forth a snowstorm with flawless poise, unleashing a Frostflake Seki no To that moves forward continuously.'
+        desc: 'Convoca uma tempestade de neve com equilíbrio impecável, liberando um Frostflake Seki no To que avança continuamente.'
       }
     ]
   },

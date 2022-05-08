@@ -19,7 +19,7 @@
           {{character.name}}
         </span>
         <img @click="redirectToPage(character.id)" :src="character.image" :alt="character.name" srcset="">
-        <ModalCharacter :personagem="character"/>
+        <ModalCharacter :character="character"/>
       </div>
     </div>
   </div>

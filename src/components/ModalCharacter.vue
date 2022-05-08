@@ -1,24 +1,23 @@
 <template>
   <div class="modais-container">
     <div class="modal-btn">
-      <button @click="showCharacter(personagem)">Resumo</button>
+      <button @click="showCharacter(character)">Resumo</button>
     </div>
-    <div class="modal-container" :id="'modal'+personagem.id">
+    <div class="modal-container" :id="'modal'+character.id">
         <div class="modal-sub-container">
           <div class="modal-header">
-            <span>{{personagem.name}}</span>
-            <button @click="showCharacter(personagem)">X</button>
+            <span>{{character.name}}</span>
+            <button @click="showCharacter(character)">X</button>
           </div>
           <div class="modal-content">
-            <span>Id: {{personagem.id}}</span>
-            <span>Nome: {{personagem.name}}</span>
-            <span>Visão: {{personagem.vision}}</span>
-            <span>Arma: {{personagem.weapon}}</span>
-            <span>Aniversário: {{personagem.birthday}}</span>
-            <span>Estrelas: {{personagem.stars}}</span>
-            <span>Região: {{personagem.region}}</span>
+            <span>Nome: {{character.name}}</span>
+            <span>Visão: {{character.vision}}</span>
+            <span>Arma: {{character.weapon}}</span>
+            <span>Aniversário: {{character.birthday}}</span>
+            <span>Estrelas: {{character.stars}}</span>
+            <span>Região: {{character.region}}</span>
           </div>
-          <button class="modal-details" @click="redirectToPage(personagem.id)">Ver mais detalhes</button>
+          <button class="modal-details" @click="redirectToPage(character.id)">Ver mais detalhes</button>
         </div>
     </div>
   </div>
@@ -33,19 +32,19 @@ export default {
     }
   },
   props: {
-    personagem: {
+    character: {
       type: Object,
       required: true
     }
   },
   methods: {
-    showCharacter (personagem) {
+    showCharacter (character) {
       this.isOpen = !this.isOpen
       if (this.isOpen) {
-        document.getElementById('modal' + personagem.id).style.display = 'flex'
+        document.getElementById('modal' + character.id).style.display = 'flex'
         document.getElementById('app').style.overflow = 'hidden'
       } else {
-        document.getElementById('modal' + personagem.id).style.display = 'none'
+        document.getElementById('modal' + character.id).style.display = 'none'
         document.getElementById('app').style.overflow = 'auto'
       }
     },
