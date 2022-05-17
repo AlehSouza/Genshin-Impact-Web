@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="characters-filter">
+    <!-- <div class="characters-filter">
       <div class="sub-characters-filter">
         <select>
           <option>Em breve</option>
@@ -12,9 +12,13 @@
         </select>
         <h3>Filtro</h3>
       </div>
-    </div>
+    </div> -->
     <div class="container-characters-genshin">
-      <div class="character-item" v-for="(character, i) in characters" v-bind:key="i">
+      <div class="character-item"
+          v-for="(character, i) in characters"
+          v-bind:key="i"
+          v-bind:style="{backgroundColor: character.color}
+      ">
         <span>
           {{character.name}}
         </span>
@@ -46,7 +50,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '../styles/styles.scss';
 .characters-filter{
   background-color: var(--secondary-color);
@@ -76,12 +80,12 @@ export default {
 .container-characters-genshin{
   width: 90vw;
   margin: auto;
+  padding: 0px 0px 50px 0px;
   justify-content: space-between;
   flex-wrap: wrap;
   display: flex;
 }
 .character-item{
-  background-color: var(--primary-color);
   overflow: hidden;
   margin-bottom: 15px;
   border-radius: 5px;
@@ -91,6 +95,7 @@ export default {
   display: flex;
   span{
     padding: 12px;
+    color: var(--white-color);
   }
   img{
     width: 200px;

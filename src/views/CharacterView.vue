@@ -1,36 +1,45 @@
 <template>
   <div class="container-character-view">
-    <div class="header-character">
+    <div class="header-character" v-bind:style="{backgroundColor: character.color}">
       <a href="/"> Voltar</a>
       <h2>
         {{character.name}}
       </h2>
     </div>
-    <br>
     <div class="introducion-character">
       <div class="image-character">
         <img :src="character.image" :alt="character.name" srcset="">
       </div>
 
       <div class="resume-character">
-        <span>Nome: {{character.name}}</span>
-        <span>Visão: {{character.vision}}</span>
-        <span>Arma: {{character.weapon}}</span>
-        <span>Aniversário: {{character.birthday}}</span>
-        <span>Estrelas: {{character.stars}}</span>
-        <span>Região: {{character.region}}</span>
-        <span>Descrição: {{character.desc}}</span>
+        <span>
+          <b>Nome: </b>{{character.name}}
+        </span>
+        <span>
+          <b>Visão: </b> {{character.vision}}
+        </span>
+        <span>
+          <b>Arma: </b> {{character.weapon}}
+        </span>
+        <span>
+          <b>Aniversário: </b> {{character.birthday}}
+        </span>
+        <span>
+          <b>Estrelas: </b> {{character.stars}}</span>
+        <span>
+          <b>Região: </b>{{character.region}}
+        </span>
 
-        <div class="skills-character">
+        <!-- <div class="skills-character">
           <h2 v-if="character.skills">Habilidades</h2>
           <div class="skills-list" v-for="(skill, i) in character.skills" v-bind:key="i">
             <h3>• {{skill.name}}</h3>
             <span>{{skill.desc}}</span>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
-
+    <div class="footer-character" v-bind:style="{backgroundColor: character.color}"></div>
   </div>
 </template>
 
@@ -49,21 +58,28 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '../styles/styles.scss';
+body{
+  background-color: #c2c2c2;
+}
 
 .container-character-view{
-  width: 85vw;
+  max-width: 38vw;
   margin: auto;
+  border-radius: 12px;
+  overflow: hidden;
+  flex-direction: column;
+  display: flex;
 }
 .header-character{
-  background-color: var(--primary-color);
   justify-content: center;
   position: relative;
   display: flex;
   h2{
     margin: 0px;
     padding: 10px;
+    color: var(--white-color);
   }
   a{
     position: absolute;
@@ -71,26 +87,35 @@ export default {
     left: 20px;
     top: 15px;
     font-weight: bold;
+    color: var(--white-color);
   }
 }
 .introducion-character{
+  width: 100%;
   margin: auto;
+  flex-direction: row;
+  padding: 0px;
   display: flex;
 }
 .image-character{
+  width: 50%;
+  height: auto;
+  display: flex;
   img{
-    max-width: 390px;
+    width: 100%;
   }
 }
 .resume-character{
-  padding: 8px;
+  width: 50%;
+  height: auto;
+  background-color: var(--white-color);
   align-items: flex-start;
   flex-direction: column;
   display: flex;
   overflow: hidden;
   span{
     text-align: left;
-    padding: 8px;
+    padding: 10px;
   }
 }
 .skills-character{
@@ -118,5 +143,8 @@ export default {
   span{
     text-align: left;
   }
+}
+.footer-character{
+  height: 50px;
 }
 </style>

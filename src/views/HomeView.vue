@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h1>Genshin Impact - Personagens</h1>
+    <h1>Personagens</h1>
     <CharactersGenshin/>
   </div>
 </template>
@@ -18,6 +18,8 @@ export default {
 </script>
 
 <style>
+@import '../styles/styles.scss';
+
  .home{
    margin: auto;
  }

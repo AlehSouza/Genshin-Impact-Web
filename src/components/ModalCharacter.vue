@@ -1,11 +1,11 @@
 <template>
   <div class="modais-container">
     <div class="modal-btn">
-      <button @click="showCharacter(character)">Resumo</button>
+      <button @click="showCharacter(character)" v-bind:style="{backgroundColor: character.color}">Resumo</button>
     </div>
     <div class="modal-container" :id="'modal'+character.id">
         <div class="modal-sub-container">
-          <div class="modal-header">
+          <div class="modal-header" v-bind:style="{backgroundColor: character.color}">
             <span>{{character.name}}</span>
             <button @click="showCharacter(character)">X</button>
           </div>
@@ -55,13 +55,12 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '../styles/styles.scss';
 
 .modal-btn{
   width: 200px;
   button{
-    background-color: var(--tertiary-color);
     color: var(--white-color);
     width: 100%;
     padding: 15px;
@@ -98,8 +97,8 @@ export default {
 .modal-header{
   padding: 12px;
   position: relative;
-  background-color: var(--primary-color);
   button{
+    color: var(--white-color);
     height: 100%;
     top: 0px;
     right: 2px;
@@ -110,6 +109,10 @@ export default {
     border: 0px;
     cursor: pointer;
   }
+  span{
+    font-weight: bold;
+    color:var(--white-color)
+  }
 }
 .modal-content{
   justify-content: left;
@@ -117,6 +120,7 @@ export default {
   display: flex;
   span{
     text-align: left;
+    padding: 12px;
   }
 }
 .modal-details{

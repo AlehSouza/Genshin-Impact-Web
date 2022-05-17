@@ -20,13 +20,13 @@
   color: #2c3e50;
 }
 html, body{
+  background-color: beige;
   overflow-x: hidden;
   margin: 0px;
   padding: 0px;
 }
 nav {
-  padding: 30px;
-
+  padding: 20px;
   a {
     font-weight: bold;
     color: #2c3e50;
