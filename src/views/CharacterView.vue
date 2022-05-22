@@ -25,7 +25,9 @@
           <b>Aniversário: </b> {{character.birthday}}
         </span>
         <span>
-          <b>Estrelas: </b> {{character.stars}}</span>
+          <b>Estrelas: </b> {{character.stars}}
+          <b v-for="(stars, index) in character.stars" v-bind:key="index">⭐</b>
+          </span>
         <span>
           <b>Região: </b>{{character.region}}
         </span>

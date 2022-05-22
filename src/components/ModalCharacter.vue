@@ -10,14 +10,27 @@
             <button @click="showCharacter(character)">X</button>
           </div>
           <div class="modal-content">
-            <span>Nome: {{character.name}}</span>
-            <span>Visão: {{character.vision}}</span>
-            <span>Arma: {{character.weapon}}</span>
-            <span>Aniversário: {{character.birthday}}</span>
-            <span>Estrelas: {{character.stars}}</span>
-            <span>Região: {{character.region}}</span>
+            <span>
+              <b>Nome:</b> {{character.name}}
+            </span>
+            <span>
+              <b>Visão:</b> {{character.vision}}
+            </span>
+            <span>
+              <b>Arma:</b> {{character.weapon}}
+            </span>
+            <span>
+              <b>Aniversário:</b> {{character.birthday}}
+            </span>
+            <span>
+              <b>Estrelas:</b> {{character.stars}}
+              <b v-for="(star, i) in character.stars" v-bind:key="i">⭐</b>
+            </span>
+            <span>
+              <b>Região:</b> {{character.region}}
+            </span>
           </div>
-          <button class="modal-details" @click="redirectToPage(character.id)">Ver mais detalhes</button>
+          <button class="modal-details" v-bind:style="{backgroundColor: character.color}" @click="redirectToPage(character.id)">Ver mais detalhes</button>
         </div>
     </div>
   </div>

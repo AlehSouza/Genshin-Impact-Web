@@ -272,10 +272,10 @@ const CharactersGenshin = [
   },
   {
     id: 20,
-    name: 'Keqing',
+    name: 'Keqing - Rainha',
     vision: 'Electro',
     weapon: 'Espada',
-    birthday: '',
+    birthday: '20/11',
     stars: 5,
     region: 'Liyue',
     color: '#9B1BD1',
