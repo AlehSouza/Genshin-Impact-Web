@@ -24,7 +24,7 @@ import KleeImage from './banner_characters/Klee.webp'
 import KujouSaraImage from './banner_characters/KujouSara.webp'
 import LisaImage from './banner_characters/Lisa.webp'
 import MonaImage from './banner_characters/Mona.webp'
-import NigguangImage from './banner_characters/Nigguang.webp'
+import NingguangImage from './banner_characters/Nigguang.webp'
 import NoelleImage from './banner_characters/Noelle.webp'
 import QiqiImage from './banner_characters/Qiqi.webp'
 import RaidenShogunImage from './banner_characters/RaidenShogun.webp'
@@ -47,6 +47,7 @@ import YunJinImage from './banner_characters/YunJin.webp'
 import ZhongliImage from './banner_characters/Zhongli.webp'
 import TravelerImage from './banner_characters/Traveler.webp'
 import YelanImage from './banner_characters/Yelan.webp'
+import HeizouImage from './banner_characters/Heizou.webp'
 
 export {
   KamisatoAyakaImage,
@@ -74,7 +75,7 @@ export {
   KujouSaraImage,
   LisaImage,
   MonaImage,
-  NigguangImage,
+  NingguangImage,
   NoelleImage,
   QiqiImage,
   RaidenShogunImage,
@@ -96,5 +97,8 @@ export {
   YunJinImage,
   ZhongliImage,
   YelanImage,
+  HeizouImage,
   TravelerImage
 }
+
+// #TODO fix name nigguang to ningguang
