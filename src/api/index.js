@@ -86,7 +86,7 @@ const CharactersGenshin = [
   },
   {
     id: 3,
-    name: 'Heizou',
+    name: 'Shikanoin Heizou',
     vision: 'Anemo',
     weapon: 'Catalisador',
     birthday: 'None',
