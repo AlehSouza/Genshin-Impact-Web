@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <!-- <div class="characters-filter">
       <div class="sub-characters-filter">
         <select>
@@ -13,6 +13,7 @@
         <h3>Filtro</h3>
       </div>
     </div> -->
+    <h1>Personagens</h1>
     <div class="container-characters-genshin">
       <div class="character-item"
           v-for="(character, i) in characters"
@@ -54,6 +55,16 @@ export default {
 <style lang="scss" scoped>
 @import '../styles/styles.scss';
 
+.container {
+  border-bottom: 35px solid var(--primary-color);
+  h1 {
+    margin: 0px;
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+  }
+}
+
 .characters-filter{
   background-color: var(--secondary-color);
   padding: 8px;
@@ -82,8 +93,8 @@ export default {
 
 .container-characters-genshin{
   width: 90vw;
+  padding: 25px 0px;
   margin: auto;
-  padding: 0px 0px 50px 0px;
   justify-content: space-between;
   flex-wrap: wrap;
   display: flex;

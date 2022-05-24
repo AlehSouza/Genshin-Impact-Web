@@ -43,7 +43,7 @@ export default {
     getIdByName (name) {
       this.invalidCharacter = ''
       CharactersGenshin.forEach(Character => {
-        if (Character.name === name) {
+        if (Character.name.toUpperCase() === name.toUpperCase()) {
           this.redirectToPage(Character.id)
         }
       })
@@ -62,7 +62,6 @@ export default {
   background-image: url('../assets/backgrounds/bg_lumine_xiangling.webp');
   background-size: cover;
   background-position: center;
-  margin-bottom: 60px;
 }
 
 .header-subcontainer{
