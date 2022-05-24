@@ -1,47 +1,42 @@
 <template>
-  <div class="container-character-view">
-    <div class="header-character" v-bind:style="{backgroundColor: character.color}">
-      <a href="/"> Voltar</a>
-      <h2>
-        {{character.name}}
-      </h2>
-    </div>
-    <div class="introducion-character">
-      <div class="image-character">
-        <img :src="character.image" :alt="character.name" srcset="">
-      </div>
-
-      <div class="resume-character">
-        <span>
-          <b>Nome: </b>{{character.name}}
-        </span>
-        <span>
-          <b>Visão: </b> {{character.vision}}
-        </span>
-        <span>
-          <b>Arma: </b> {{character.weapon}}
-        </span>
-        <span>
-          <b>Aniversário: </b> {{character.birthday}}
-        </span>
-        <span>
-          <b>Estrelas: </b> {{character.stars}}
-          <b v-for="(stars, index) in character.stars" v-bind:key="index">⭐</b>
-          </span>
-        <span>
-          <b>Região: </b>{{character.region}}
-        </span>
-
-        <!-- <div class="skills-character">
-          <h2 v-if="character.skills">Habilidades</h2>
-          <div class="skills-list" v-for="(skill, i) in character.skills" v-bind:key="i">
-            <h3>• {{skill.name}}</h3>
-            <span>{{skill.desc}}</span>
+  <div class="container-bg">
+    <div class="container-bg-opacity">
+      <div class="container-character-view">
+        <div class="header-character" v-bind:style="{backgroundColor: character.color}">
+          <a href="/"> Voltar</a>
+          <h2>
+            {{character.name}}
+          </h2>
+        </div>
+        <div class="introducion-character">
+          <div class="image-character">
+            <img :src="character.image" :alt="character.name" srcset="">
           </div>
-        </div> -->
+          <div class="resume-character">
+            <span>
+              <b>Nome: </b>{{character.name}}
+            </span>
+            <span>
+              <b>Visão: </b> {{character.vision}}
+            </span>
+            <span>
+              <b>Arma: </b> {{character.weapon}}
+            </span>
+            <span>
+              <b>Aniversário: </b> {{character.birthday}}
+            </span>
+            <span>
+              <b>Estrelas: </b> {{character.stars}}
+              <b v-for="(stars, index) in character.stars" v-bind:key="index">⭐</b>
+              </span>
+            <span>
+              <b>Região: </b>{{character.region}}
+            </span>
+          </div>
+        </div>
+        <div class="footer-character" v-bind:style="{backgroundColor: character.color}"></div>
       </div>
     </div>
-    <div class="footer-character" v-bind:style="{backgroundColor: character.color}"></div>
   </div>
 </template>
 
@@ -62,8 +57,18 @@ export default {
 
 <style lang="scss" scoped>
 @import '../styles/styles.scss';
-body{
-  background-color: #c2c2c2;
+
+.container-bg {
+  width: 100%;
+  height: 100%;
+  background-image: url('../assets/backgrounds/bg_lumine_xiangling.webp');
+  background-size: cover;
+  border-bottom: 8px solid #343434;
+}
+
+.container-bg-opacity {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 50px;
 }
 
 .container-character-view{
@@ -74,6 +79,7 @@ body{
   flex-direction: column;
   display: flex;
 }
+
 .header-character{
   justify-content: center;
   position: relative;
@@ -92,6 +98,7 @@ body{
     color: var(--white-color);
   }
 }
+
 .introducion-character{
   width: 100%;
   margin: auto;
@@ -99,6 +106,7 @@ body{
   padding: 0px;
   display: flex;
 }
+
 .image-character{
   width: 50%;
   height: auto;
@@ -107,6 +115,7 @@ body{
     width: 100%;
   }
 }
+
 .resume-character{
   width: 50%;
   height: auto;
@@ -120,6 +129,7 @@ body{
     padding: 10px;
   }
 }
+
 .skills-character{
   padding-bottom: 50px;
   h2{
@@ -130,6 +140,7 @@ body{
     padding: 10px;
   }
 }
+
 .skills-list{
   text-align: left;
   flex-direction: column;
@@ -146,7 +157,9 @@ body{
     text-align: left;
   }
 }
+
 .footer-character{
   height: 50px;
 }
+
 </style>

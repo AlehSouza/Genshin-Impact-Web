@@ -42,9 +42,10 @@ export default {
       characters: CharactersGenshin
     }
   },
-  methods: {
-    redirectToPage (x) {
-      this.$router.push('/characterview/' + x)
+  props: {
+    redirectToPage: {
+      type: Function,
+      required: true
     }
   }
 }
@@ -52,6 +53,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '../styles/styles.scss';
+
 .characters-filter{
   background-color: var(--secondary-color);
   padding: 8px;
@@ -77,6 +79,7 @@ export default {
     }
   }
 }
+
 .container-characters-genshin{
   width: 90vw;
   margin: auto;
@@ -85,10 +88,12 @@ export default {
   flex-wrap: wrap;
   display: flex;
 }
+
 .character-item{
   overflow: hidden;
-  margin-bottom: 15px;
+  margin: 15px 9px;
   border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -102,7 +107,9 @@ export default {
     cursor: pointer;
   }
 }
+
 span{
   font-weight: bold;
 }
+
 </style>

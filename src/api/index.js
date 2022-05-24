@@ -48,7 +48,7 @@ import {
   YelanImage,
   HeizouImage,
   TravelerImage
-} from '../assets/index'
+} from '../assets/banner_characters'
 
 const CharactersGenshin = [
   {
