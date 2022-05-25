@@ -66,15 +66,19 @@ export default {
 
 .container-bg {
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  overflow: hidden;
   background-image: url('../assets/backgrounds/bg_lumine_xiangling.webp');
   background-size: cover;
-  border-bottom: 8px solid #343434;
 }
 
 .container-bg-opacity {
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 50px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
 .container-character-view{

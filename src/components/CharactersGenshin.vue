@@ -103,10 +103,15 @@ export default {
       color: var(--white-color)
     }
     select{
+      border-radius: 50px;
       width: 180px;
       padding: 8px;
       outline: none;
       cursor: pointer;
+      text-align: left;
+      align-items: left;
+      justify-content: left;
+      display: flex;
       options {
         cursor: pointer;
       }
@@ -115,17 +120,17 @@ export default {
 }
 
 .container-characters-genshin{
-  width: 90vw;
+  width: 93vw;
   padding: 25px 0px;
   margin: auto;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   display: flex;
 }
 
 .character-item{
   overflow: hidden;
-  margin: 15px 9px;
+  margin: 15px;
   border-radius: 5px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   flex-direction: column;
