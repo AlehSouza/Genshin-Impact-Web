@@ -50,10 +50,14 @@ import {
   TravelerImage
 } from '../assets/banner_characters'
 
+// #TODO Adicionar GENDER && CONSTELAÇÃO nos objetos dos personagens
+
 const CharactersGenshin = [
   {
     id: 0,
     name: 'Kamisato Ayaka',
+    gender: 'Feminino',
+    constellation: 'Grus Nivis',
     vision: 'Cryo',
     weapon: 'Espada',
     birthday: '28/09',
@@ -65,6 +69,8 @@ const CharactersGenshin = [
   {
     id: 1,
     name: 'Yelan',
+    gender: 'Feminino',
+    constellation: 'Umbrabilis Orchis',
     vision: 'Hydro',
     weapon: 'Arco',
     birthday: '20/04',
@@ -76,6 +82,8 @@ const CharactersGenshin = [
   {
     id: 2,
     name: 'Yae Miko',
+    gender: 'Feminino',
+    constellation: 'Divina Vulpes',
     vision: 'Electro',
     weapon: 'Catalisador',
     birthday: '27/06',
@@ -87,6 +95,8 @@ const CharactersGenshin = [
   {
     id: 3,
     name: 'Shikanoin Heizou',
+    gender: 'Masculino',
+    constellation: '',
     vision: 'Anemo',
     weapon: 'Catalisador',
     birthday: 'None',
@@ -98,6 +108,8 @@ const CharactersGenshin = [
   {
     id: 4,
     name: 'Shenhe',
+    gender: 'Feminino',
+    constellation: 'Crista Doloris',
     vision: 'Cryo',
     weapon: 'Lança',
     birthday: '10/03',
@@ -109,6 +121,8 @@ const CharactersGenshin = [
   {
     id: 5,
     name: 'Yoimiya',
+    gender: 'Feminino',
+    constellation: 'Carassius Auratus',
     vision: 'Pyro',
     weapon: 'Arco',
     birthday: '21/06',
@@ -120,6 +134,8 @@ const CharactersGenshin = [
   {
     id: 6,
     name: 'Kaedehara Kazuha',
+    gender: 'Masculino',
+    constellation: 'Acer Palmatum',
     vision: 'Anemo',
     weapon: 'Espada',
     birthday: '29/10',
@@ -131,6 +147,8 @@ const CharactersGenshin = [
   {
     id: 7,
     name: 'Ganyu',
+    gender: 'Feminino',
+    constellation: 'Sinae Unicornis',
     vision: 'Cryo',
     weapon: 'Arco',
     birthday: '02/12',
@@ -142,6 +160,8 @@ const CharactersGenshin = [
   {
     id: 8,
     name: 'Hu Tao',
+    gender: 'Feminino',
+    constellation: 'Papilio Charontis',
     vision: 'Pyro',
     weapon: 'Lança',
     birthday: '15/07',
@@ -153,6 +173,8 @@ const CharactersGenshin = [
   {
     id: 9,
     name: 'Xiao',
+    gender: 'Masculino',
+    constellation: 'Alatus Nemeseos',
     vision: 'Anemo',
     weapon: 'Lança',
     birthday: '17/04',
@@ -164,6 +186,8 @@ const CharactersGenshin = [
   {
     id: 10,
     name: 'Mona',
+    gender: 'Feminino',
+    constellation: 'Astrolabos',
     vision: 'Hydro',
     weapon: 'Catalisador',
     birthday: '31/08',
@@ -174,7 +198,9 @@ const CharactersGenshin = [
   },
   {
     id: 11,
-    name: 'Raiden Shogun',
+    name: 'Raiden Ei',
+    gender: 'Feminino',
+    constellation: 'Imperatrix Umbrosa',
     vision: 'Electro',
     weapon: 'Lança',
     birthday: '26/06',
@@ -186,6 +212,8 @@ const CharactersGenshin = [
   {
     id: 12,
     name: 'Eula',
+    gender: 'Feminino',
+    constellation: 'Aphros Delos',
     vision: 'Cryo',
     weapon: 'Espadão',
     birthday: '25/10',
@@ -197,6 +225,8 @@ const CharactersGenshin = [
   {
     id: 13,
     name: 'Diona',
+    gender: 'Feminino',
+    constellation: 'Feles',
     vision: 'Cryo',
     weapon: 'Arco',
     birthday: '18/01',
@@ -208,6 +238,8 @@ const CharactersGenshin = [
   {
     id: 14,
     name: 'Keqing - Rainha',
+    gender: 'Feminino',
+    constellation: 'Trulla Cementarii',
     vision: 'Electro',
     weapon: 'Espada',
     birthday: '20/11',
@@ -219,6 +251,8 @@ const CharactersGenshin = [
   {
     id: 15,
     name: 'Tartaglia',
+    gender: 'Masculino',
+    constellation: 'Monoceros Caeli',
     vision: 'Hydro',
     weapon: 'Arco',
     birthday: '20/07',
@@ -230,6 +264,8 @@ const CharactersGenshin = [
   {
     id: 16,
     name: 'Bennett',
+    gender: 'Masculino',
+    constellation: 'Rota Calamitas',
     vision: 'Pyro',
     weapon: 'Espada',
     birthday: '29/02',
@@ -241,6 +277,8 @@ const CharactersGenshin = [
   {
     id: 17,
     name: 'Jean',
+    gender: 'Feminino',
+    constellation: 'Leo Minor',
     vision: 'Anemo',
     weapon: 'Espada',
     birthday: '14/03',
@@ -252,6 +290,8 @@ const CharactersGenshin = [
   {
     id: 18,
     name: 'Barbara',
+    gender: 'Feminino',
+    constellation: 'Crater',
     vision: 'Hydro',
     weapon: 'Catalisador',
     birthday: '05/07',
@@ -263,6 +303,8 @@ const CharactersGenshin = [
   {
     id: 19,
     name: 'Kaeya',
+    gender: 'Masculino',
+    constellation: 'Pavo Ocellus',
     vision: 'Cryo',
     weapon: 'Espada',
     birthday: '30/11',
@@ -274,6 +316,8 @@ const CharactersGenshin = [
   {
     id: 20,
     name: 'Chongyun',
+    gender: 'Masculino',
+    constellation: 'Nubis Caesor',
     vision: 'Cryo',
     weapon: 'Espadão',
     birthday: '07/09',
@@ -285,6 +329,8 @@ const CharactersGenshin = [
   {
     id: 21,
     name: 'Klee',
+    gender: 'Feminino',
+    constellation: 'Trifolium',
     vision: 'Pyro',
     weapon: 'Catalisador',
     birthday: '27/07',
@@ -296,6 +342,8 @@ const CharactersGenshin = [
   {
     id: 22,
     name: 'Kujou Sara',
+    gender: 'Feminino',
+    constellation: 'Flabellum',
     vision: 'Electro',
     weapon: 'Arco',
     birthday: '14/07',
@@ -307,6 +355,8 @@ const CharactersGenshin = [
   {
     id: 23,
     name: 'Lisa',
+    gender: 'Feminino',
+    constellation: 'Tempus Fugit',
     vision: 'Electro',
     weapon: 'Catalisador',
     birthday: '09/06',
@@ -318,6 +368,8 @@ const CharactersGenshin = [
   {
     id: 24,
     name: 'Diluc',
+    gender: 'Masculino',
+    constellation: 'Noctua',
     vision: 'Pyro',
     weapon: 'Espadão',
     birthday: '30/04',
@@ -329,6 +381,8 @@ const CharactersGenshin = [
   {
     id: 25,
     name: 'Ningguang',
+    gender: 'Feminino',
+    constellation: 'Opus Aequilibrium',
     vision: 'Geo',
     weapon: 'Catalisador',
     birthday: '26/08',
@@ -340,6 +394,8 @@ const CharactersGenshin = [
   {
     id: 26,
     name: 'Noelle',
+    gender: 'Feminino',
+    constellation: 'Parma Cordis',
     vision: 'Geo',
     weapon: 'Espadão',
     birthday: '21/03',
@@ -351,6 +407,8 @@ const CharactersGenshin = [
   {
     id: 27,
     name: 'Qiqi',
+    gender: 'Feminino',
+    constellation: 'Pristina Nola',
     vision: 'Cryo',
     weapon: 'Espada',
     birthday: '03/03',
@@ -362,6 +420,8 @@ const CharactersGenshin = [
   {
     id: 28,
     name: 'Fischl',
+    gender: 'Feminino',
+    constellation: 'Corvus',
     vision: 'Electro',
     weapon: 'Arco',
     birthday: '27/05',
@@ -373,6 +433,8 @@ const CharactersGenshin = [
   {
     id: 29,
     name: 'Razor',
+    gender: 'Masculino',
+    constellation: 'Lupus Minor',
     vision: 'Electro',
     weapon: 'Espadão',
     birthday: '09/09',
@@ -384,6 +446,8 @@ const CharactersGenshin = [
   {
     id: 30,
     name: 'Rosaria',
+    gender: 'Feminino',
+    constellation: 'Spinea Corona',
     vision: 'Cryo',
     weapon: 'Lança',
     birthday: '24/01',
@@ -395,6 +459,8 @@ const CharactersGenshin = [
   {
     id: 31,
     name: 'Sangonomiya Kokomi',
+    gender: 'Feminino',
+    constellation: 'Dracaena Somnolenta',
     vision: 'Hydro',
     weapon: 'Catalisador',
     birthday: '22/02',
@@ -406,6 +472,8 @@ const CharactersGenshin = [
   {
     id: 32,
     name: 'Sayu',
+    gender: 'Feminino',
+    constellation: 'Nyctereutes Minor',
     vision: 'Anemo',
     weapon: 'Espadão',
     birthday: '19/10',
@@ -417,6 +485,8 @@ const CharactersGenshin = [
   {
     id: 33,
     name: 'Amber',
+    gender: 'Feminino',
+    constellation: 'Lepus',
     vision: 'Pyro',
     weapon: 'Arco',
     birthday: '10/08',
@@ -428,6 +498,8 @@ const CharactersGenshin = [
   {
     id: 34,
     name: 'Sucrose',
+    gender: 'Feminino',
+    constellation: 'Ampulla',
     vision: 'Anemo',
     weapon: 'Catalisador',
     birthday: '26/11',
@@ -439,6 +511,8 @@ const CharactersGenshin = [
   {
     id: 35,
     name: 'Gorou',
+    gender: 'Masculino',
+    constellation: 'Canis Bellatoris',
     vision: 'Geo',
     weapon: 'Arco',
     birthday: '18/05',
@@ -450,6 +524,8 @@ const CharactersGenshin = [
   {
     id: 36,
     name: 'Thoma',
+    gender: 'Masculino',
+    constellation: 'Rubeum Scutum',
     vision: 'Pyro',
     weapon: 'Lança',
     birthday: '09/01',
@@ -461,6 +537,8 @@ const CharactersGenshin = [
   {
     id: 37,
     name: 'Venti',
+    gender: 'Masculino',
+    constellation: 'Carmen Dei',
     vision: 'Anemo',
     weapon: 'Arco',
     birthday: '16/06',
@@ -472,6 +550,8 @@ const CharactersGenshin = [
   {
     id: 38,
     name: 'Xiangling',
+    gender: 'Feminino',
+    constellation: 'Trulla',
     vision: 'Pyro',
     weapon: 'Lança',
     birthday: '02/11',
@@ -483,6 +563,8 @@ const CharactersGenshin = [
   {
     id: 39,
     name: 'Beidou',
+    gender: 'Feminino',
+    constellation: 'Victor Mare',
     vision: 'Electro',
     weapon: 'Espadão',
     birthday: '14/02',
@@ -494,6 +576,8 @@ const CharactersGenshin = [
   {
     id: 40,
     name: 'Xingqiu',
+    gender: 'Masculino',
+    constellation: 'Fabulae Textile',
     vision: 'Hydro',
     weapon: 'Espada',
     birthday: '09/10',
@@ -505,6 +589,8 @@ const CharactersGenshin = [
   {
     id: 41,
     name: 'Yun Jin',
+    gender: 'Feminino',
+    constellation: 'Opera Grandis',
     vision: 'Geo',
     weapon: 'Lança',
     birthday: '21/05',
@@ -516,6 +602,8 @@ const CharactersGenshin = [
   {
     id: 42,
     name: 'Yanfei',
+    gender: 'Feminino',
+    constellation: 'Bestia Iustitia',
     vision: 'Pyro',
     weapon: 'Catalisador',
     birthday: '28/07',
@@ -527,6 +615,8 @@ const CharactersGenshin = [
   {
     id: 43,
     name: 'Arataki Itto',
+    gender: 'Masculino',
+    constellation: 'Taurus Iracundus',
     vision: 'Geo',
     weapon: 'Espadão',
     birthday: '01/06',
@@ -538,6 +628,8 @@ const CharactersGenshin = [
   {
     id: 44,
     name: 'Xinyan',
+    gender: 'Feminino',
+    constellation: 'Fila Ignium',
     vision: 'Pyro',
     weapon: 'Espadão',
     birthday: '16/10',
@@ -549,6 +641,8 @@ const CharactersGenshin = [
   {
     id: 45,
     name: 'Zhongli',
+    gender: 'Masculino',
+    constellation: 'Lapis Dei',
     vision: 'Geo',
     weapon: 'Lança',
     birthday: '31/12',
@@ -560,6 +654,8 @@ const CharactersGenshin = [
   {
     id: 46,
     name: 'Kamisato Ayato',
+    gender: 'Masculino',
+    constellation: 'Cypressus Custos',
     vision: 'Hydro',
     weapon: 'Espada',
     birthday: '26/03',
@@ -571,6 +667,8 @@ const CharactersGenshin = [
   {
     id: 47,
     name: 'Albedo',
+    gender: 'Masculino',
+    constellation: 'Princeps Cretaceus',
     vision: 'Geo',
     weapon: 'Espada',
     birthday: '13/09',
@@ -582,12 +680,14 @@ const CharactersGenshin = [
   {
     id: 48,
     name: 'Traveler',
+    gender: 'Masculino',
+    constellation: '',
     vision: '',
     weapon: 'Espada',
     birthday: '',
     stars: 5,
     region: '',
-    color: 'black',
+    color: '#000000',
     image: TravelerImage
   }
 ]

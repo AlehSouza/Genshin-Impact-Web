@@ -4,9 +4,10 @@
       <div class="sub-characters-filter">
         <h3>Filtro</h3>
         <select v-on:change="changeFilter($event)">
-          <option value="id" selected>Selecione um filtro</option>
+          <option value="id" selected>Nenhum</option>
           <option value="name">Alfabética</option>
           <option value="weapon">Arma</option>
+          <option value="gender">Gênero</option>
           <option value="vision">Visão</option>
         </select>
       </div>
@@ -62,7 +63,6 @@ export default {
         return
       }
       this.characters.sort((a, b) => a[e.target.value].localeCompare(b[e.target.value]))
-      console.log(this.characters)
     }
   }
 }

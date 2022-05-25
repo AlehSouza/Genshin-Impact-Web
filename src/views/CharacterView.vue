@@ -14,23 +14,29 @@
           </div>
           <div class="resume-character">
             <span>
-              <b>Nome: </b>{{character.name}}
-            </span>
-            <span>
-              <b>Visão: </b> {{character.vision}}
-            </span>
-            <span>
-              <b>Arma: </b> {{character.weapon}}
-            </span>
-            <span>
-              <b>Aniversário: </b> {{character.birthday}}
-            </span>
-            <span>
-              <b>Estrelas: </b> {{character.stars}}
+              <b>Rank (Estrelas) : </b> {{character.stars || 'Não há registros'}}
               <b v-for="(stars, index) in character.stars" v-bind:key="index">⭐</b>
-              </span>
+            </span>
             <span>
-              <b>Região: </b>{{character.region}}
+              <b>Nome: </b>{{character.name || 'Não há registros'}}
+            </span>
+            <span>
+              <b>Visão: </b> {{character.vision || 'Não há registros'}}
+            </span>
+            <span>
+              <b>Gênero: </b>{{character.gender || 'Não há registros'}}
+            </span>
+            <span>
+              <b>Constelação: </b>{{character.constellation || 'Não há registros'}}
+            </span>
+            <span>
+              <b>Arma: </b> {{character.weapon || 'Não há registros'}}
+            </span>
+            <span>
+              <b>Aniversário: </b> {{character.birthday || 'Não há registros'}}
+            </span>
+            <span>
+              <b>Região: </b>{{character.region || 'Não há registros'}}
             </span>
           </div>
         </div>

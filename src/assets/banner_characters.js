@@ -100,5 +100,3 @@ export {
   HeizouImage,
   TravelerImage
 }
-
-// #TODO fix name nigguang to ningguang
