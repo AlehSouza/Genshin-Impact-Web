@@ -1,19 +1,17 @@
 <template>
   <div class="container">
-    <!-- <div class="characters-filter">
+    <div class="characters-filter">
       <div class="sub-characters-filter">
-        <select>
-          <option>Em breve</option>
-          <option>Em breve</option>
-          <option>Em breve</option>
-          <option>Em breve</option>
-          <option>Em breve</option>
-          <option>Em breve</option>
-        </select>
         <h3>Filtro</h3>
+        <select v-on:change="changeFilter($event)">
+          <option value="id" selected>Selecione um filtro</option>
+          <option value="name">Alfabética</option>
+          <option value="weapon">Arma</option>
+          <option value="vision">Visão</option>
+        </select>
       </div>
-    </div> -->
-    <h1>Personagens</h1>
+      <h1>Personagens</h1>
+    </div>
     <div class="container-characters-genshin">
       <div class="character-item"
           v-for="(character, i) in characters"
@@ -40,13 +38,30 @@ export default {
   },
   data () {
     return {
-      characters: CharactersGenshin
+      characters: [],
+      charactersDefault: CharactersGenshin,
+      filterOption: ''
     }
   },
   props: {
     redirectToPage: {
       type: Function,
       required: true
+    }
+  },
+  mounted () {
+    CharactersGenshin.forEach(Character => {
+      this.characters.push(Character)
+    })
+  },
+  methods: {
+    changeFilter (e) {
+      this.filterOption = e.target.options[e.target.options.selectedIndex].value
+      if (this.filterOption === 'id') {
+        this.characters.sort((a, b) => a.id.toString().localeCompare(b.id))
+        return
+      }
+      this.characters.sort((a, b) => a[e.target.value].localeCompare(b[e.target.value]))
     }
   }
 }
@@ -66,15 +81,19 @@ export default {
 }
 
 .characters-filter{
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   padding: 8px;
   margin-bottom: 15px;
   justify-content: center;
   align-items: center;
   display: flex;
+
   .sub-characters-filter{
-    width: 90vw;
-    flex-direction: row-reverse;
+    position: absolute;
+    left: 10vw;
+    flex-wrap: wrap;
+    padding: 0px 8px;
+    justify-content: center;
     display: flex;
     h3{
       margin: auto 0px;
@@ -83,10 +102,13 @@ export default {
       color: var(--white-color)
     }
     select{
-      text-align: left;
       width: 180px;
-      padding: 12px;
+      padding: 8px;
+      outline: none;
       cursor: pointer;
+      options {
+        cursor: pointer;
+      }
     }
   }
 }

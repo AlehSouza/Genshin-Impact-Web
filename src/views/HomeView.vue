@@ -19,9 +19,6 @@ export default {
   methods: {
     redirectToPage (x) {
       this.$router.push('/characterview/' + x)
-    },
-    redirectToPageByName (x) {
-      this.$router.push('/characterview/' + x)
     }
   }
 }

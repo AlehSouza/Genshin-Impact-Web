@@ -582,11 +582,11 @@ const CharactersGenshin = [
   {
     id: 47,
     name: 'Traveler',
-    vision: 'None',
+    vision: '',
     weapon: 'Espada',
-    birthday: 'None',
+    birthday: '',
     stars: 5,
-    region: 'None',
+    region: '',
     color: 'black',
     image: TravelerImage
   }
