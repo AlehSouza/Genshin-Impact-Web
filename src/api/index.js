@@ -46,8 +46,8 @@ import {
   YunJinImage,
   ZhongliImage,
   YelanImage,
-  HeizouImage
-  // TravelerImage
+  HeizouImage,
+  TravelerImage
 } from '../assets/banner_characters'
 
 const CharactersGenshin = [
@@ -67,7 +67,7 @@ const CharactersGenshin = [
     name: 'Yelan',
     vision: 'Hydro',
     weapon: 'Arco',
-    birthday: '',
+    birthday: '20/04',
     stars: 5,
     region: 'Liyue',
     color: '#0071E9',
@@ -569,7 +569,7 @@ const CharactersGenshin = [
     image: KamisatoAyatoImage
   },
   {
-    id: 3,
+    id: 47,
     name: 'Albedo',
     vision: 'Geo',
     weapon: 'Espada',
@@ -578,18 +578,18 @@ const CharactersGenshin = [
     region: 'Mondstadt',
     color: '#FFB400',
     image: AlbedoImage
+  },
+  {
+    id: 48,
+    name: 'Traveler',
+    vision: '',
+    weapon: 'Espada',
+    birthday: '',
+    stars: 5,
+    region: '',
+    color: 'black',
+    image: TravelerImage
   }
-  // {
-  //   id: 47,
-  //   name: 'Traveler',
-  //   vision: '',
-  //   weapon: 'Espada',
-  //   birthday: '',
-  //   stars: 5,
-  //   region: '',
-  //   color: 'black',
-  //   image: TravelerImage
-  // }
 ]
 
 export default CharactersGenshin

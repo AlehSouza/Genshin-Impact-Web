@@ -62,6 +62,7 @@ export default {
         return
       }
       this.characters.sort((a, b) => a[e.target.value].localeCompare(b[e.target.value]))
+      console.log(this.characters)
     }
   }
 }
