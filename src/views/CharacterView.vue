@@ -1,5 +1,5 @@
 <template>
-  <div class="container-bg">
+  <div class="container-bg" v-bind:style="{backgroundImage: 'url('+ character.bgImage +')'}">
     <div class="container-bg-opacity">
       <div class="container-character-view">
         <div class="header-character" v-bind:style="{backgroundColor: character.color}">
@@ -18,25 +18,25 @@
               <b v-for="(stars, index) in character.stars" v-bind:key="index">⭐</b>
             </span>
             <span>
-              <b>Nome: </b>{{character.name || 'Não há registros'}}
+              <b>Nome: </b>{{ haveData(character.name) }}
             </span>
             <span>
-              <b>Visão: </b> {{character.vision || 'Não há registros'}}
+              <b>Visão: </b> {{ haveData(character.vision) }}
             </span>
             <span>
-              <b>Gênero: </b>{{character.gender || 'Não há registros'}}
+              <b>Gênero: </b> {{ haveData(character.gender) }}
             </span>
             <span>
-              <b>Constelação: </b>{{character.constellation || 'Não há registros'}}
+              <b>Constelação: </b> {{ haveData(character.constellation) }}
             </span>
             <span>
-              <b>Arma: </b> {{character.weapon || 'Não há registros'}}
+              <b>Arma: </b>  {{ haveData(character.weapon )}}
             </span>
             <span>
-              <b>Aniversário: </b> {{character.birthday || 'Não há registros'}}
+              <b>Aniversário: </b>  {{ haveData(character.birthday) }}
             </span>
             <span>
-              <b>Região: </b>{{character.region || 'Não há registros'}}
+              <b>Região: </b> {{ haveData(character.region) }}
             </span>
           </div>
         </div>
@@ -55,6 +55,11 @@ export default {
       character: []
     }
   },
+  methods: {
+    haveData (property) {
+      return property || 'Não há registros'
+    }
+  },
   beforeMount () {
     this.character = CharactersGenshin[(this.$route.params.id)]
   }
@@ -68,7 +73,6 @@ export default {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background-image: url('../assets/backgrounds/bg_lumine_xiangling.webp');
   background-size: cover;
 }
 

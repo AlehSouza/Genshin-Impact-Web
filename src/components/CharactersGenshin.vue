@@ -103,6 +103,7 @@ export default {
       color: var(--white-color)
     }
     select{
+      border: 0px;
       border-radius: 50px;
       width: 180px;
       padding: 8px;

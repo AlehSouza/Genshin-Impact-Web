@@ -11,10 +11,10 @@
           </div>
           <div class="modal-content">
             <span>
-              <b>Nome:</b> {{ character.name || 'Não há registros'}} <b v-for="(star, i) in character.stars" v-bind:key="i">⭐</b>
+              <b>Nome:</b> {{ haveData (character.name) }} <b v-for="(star, i) in character.stars" v-bind:key="i">⭐</b>
             </span>
             <span>
-              <b>Visão:</b> {{ character.vision || 'Não há registros' }}
+              <b>Visão:</b> {{ haveData (character.vision) }}
             </span>
           </div>
           <button class="modal-details" v-bind:style="{backgroundColor: character.color}" @click="redirectToPage(character.id)">Ver mais detalhes</button>
@@ -50,6 +50,9 @@ export default {
     },
     redirectToPage (x) {
       this.$router.push('/characterview/' + x)
+    },
+    haveData (property) {
+      return property || 'Não há registros'
     }
   }
 }

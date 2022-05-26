@@ -1,4 +1,3 @@
-// import Image from './banner_characters/.webp'
 import KamisatoAyakaImage from './banner_characters/KamisatoAyaka.webp'
 import KamisatoAyatoImage from './banner_characters/KamisatoAyato.webp'
 import YaeMikoImage from './banner_characters/YaeMiko.webp'
