@@ -44,7 +44,8 @@ import YanfeiImage from './banner_characters/Yanfei.webp'
 import YoimiyaImage from './banner_characters/Yoimiya.webp'
 import YunJinImage from './banner_characters/YunJin.webp'
 import ZhongliImage from './banner_characters/Zhongli.webp'
-import TravelerImage from './banner_characters/Traveler.webp'
+import AetherImage from './banner_characters/Aether.webp'
+import LumineImage from './banner_characters/Lumine.webp'
 import YelanImage from './banner_characters/Yelan.webp'
 import HeizouImage from './banner_characters/Heizou.webp'
 
@@ -97,5 +98,6 @@ export {
   ZhongliImage,
   YelanImage,
   HeizouImage,
-  TravelerImage
+  AetherImage,
+  LumineImage
 }

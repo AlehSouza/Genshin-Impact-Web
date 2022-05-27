@@ -89,6 +89,7 @@ export default {
   max-width: 38vw;
   margin: auto;
   border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   overflow: hidden;
   flex-direction: column;
   display: flex;

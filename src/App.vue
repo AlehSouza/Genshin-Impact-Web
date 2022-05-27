@@ -25,6 +25,7 @@ html, body{
   padding: 0px;
 }
 nav {
+  z-index: 1;
   width: 100%;
   background-color: var(--white-color);
   position: fixed;

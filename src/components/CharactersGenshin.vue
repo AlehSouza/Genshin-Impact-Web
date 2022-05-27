@@ -5,7 +5,7 @@
         <h3>Filtro</h3>
         <select v-on:change="changeFilter($event)">
           <option value="id" selected>Nenhum</option>
-          <option value="name">Alfabética</option>
+          <option value="name">Nome</option>
           <option value="weapon">Arma</option>
           <option value="gender">Gênero</option>
           <option value="vision">Visão</option>

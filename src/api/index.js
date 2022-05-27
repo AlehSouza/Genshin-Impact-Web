@@ -47,11 +47,61 @@ import {
   ZhongliImage,
   YelanImage,
   HeizouImage,
-  TravelerImage
+  LumineImage,
+  AetherImage
 } from '../assets/banner_characters'
 
 import {
-  KamisatoAyakaBackground
+  AlbedoBackground,
+  KamisatoAyakaBackground,
+  YelanBackground,
+  YaeMikoBackground,
+  BennettBackground,
+  ShikanoinHeizouBackground,
+  BarbaraBackground,
+  ShenheBackground,
+  YoimiyaBackground,
+  KaedeharaKazuhaBackground,
+  GanyuBackground,
+  HuTaoBackground,
+  XiaoBackground,
+  MonaBackground,
+  RaidenShogunBackground,
+  EulaBackground,
+  DionaBackground,
+  DilucBackground,
+  FischlBackground,
+  GorouBackground,
+  AmberBackground,
+  JeanBackground,
+  KaeyaBackground,
+  KamisatoAyatoBackground,
+  BeidouBackground,
+  AratakiIttoBackground,
+  KeqingBackground,
+  KleeBackground,
+  KujouSaraBackground,
+  LisaBackground,
+  NingguangBackground,
+  NoelleBackground,
+  QiqiBackground,
+  RazorBackground,
+  RosariaBackground,
+  SangonomiyaKokomiBackground,
+  SayuBackground,
+  SucroseBackground,
+  TartagliaBackground,
+  ChongyunBackground,
+  ThomaBackground,
+  VentiBackground,
+  XianglingBackground,
+  XingqiuBackground,
+  XinyanBackground,
+  YanfeiBackground,
+  YunJinBackground,
+  ZhongliBackground,
+  AetherBackground,
+  LumineBackground
 } from '../assets/background_characters'
 
 // #TODO add another background image for each character
@@ -83,7 +133,7 @@ const CharactersGenshin = [
     region: 'Liyue',
     color: '#0071E9',
     image: YelanImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: YelanBackground
   },
   {
     id: 2,
@@ -97,7 +147,7 @@ const CharactersGenshin = [
     region: 'Inazuma',
     color: '#9B1BD1',
     image: YaeMikoImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: YaeMikoBackground
   },
   {
     id: 3,
@@ -111,7 +161,7 @@ const CharactersGenshin = [
     region: 'Inazuma',
     color: '#20C9A7',
     image: HeizouImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: ShikanoinHeizouBackground
   },
   {
     id: 4,
@@ -125,7 +175,7 @@ const CharactersGenshin = [
     region: 'Liyue',
     color: '#2cbcc9',
     image: ShenheImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: ShenheBackground
   },
   {
     id: 5,
@@ -139,7 +189,7 @@ const CharactersGenshin = [
     region: 'Inazuma',
     color: '#EE1E1E',
     image: YoimiyaImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: YoimiyaBackground
   },
   {
     id: 6,
@@ -153,7 +203,7 @@ const CharactersGenshin = [
     region: 'Inazuma',
     color: '#20C9A7',
     image: KaedeharaKazuhaImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: KaedeharaKazuhaBackground
   },
   {
     id: 7,
@@ -167,7 +217,7 @@ const CharactersGenshin = [
     region: 'Liyue',
     color: '#2cbcc9',
     image: GanyuImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: GanyuBackground
   },
   {
     id: 8,
@@ -181,7 +231,7 @@ const CharactersGenshin = [
     region: 'Liyue',
     color: '#EE1E1E',
     image: HuTaoImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: HuTaoBackground
   },
   {
     id: 9,
@@ -195,7 +245,7 @@ const CharactersGenshin = [
     region: 'Liyue',
     color: '#20C9A7',
     image: XiaoImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: XiaoBackground
   },
   {
     id: 10,
@@ -209,7 +259,7 @@ const CharactersGenshin = [
     region: 'Mondstadt',
     color: '#0071E9',
     image: MonaImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: MonaBackground
   },
   {
     id: 11,
@@ -223,7 +273,7 @@ const CharactersGenshin = [
     region: 'Inazuma',
     color: '#9B1BD1',
     image: RaidenShogunImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: RaidenShogunBackground
   },
   {
     id: 12,
@@ -237,7 +287,7 @@ const CharactersGenshin = [
     region: 'Mondstadt',
     color: '#2cbcc9',
     image: EulaImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: EulaBackground
   },
   {
     id: 13,
@@ -251,7 +301,7 @@ const CharactersGenshin = [
     region: 'Mondstadt',
     color: '#2cbcc9',
     image: DionaImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: DionaBackground
   },
   {
     id: 14,
@@ -265,7 +315,7 @@ const CharactersGenshin = [
     region: 'Liyue',
     color: '#9B1BD1',
     image: KeqingImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: KeqingBackground
   },
   {
     id: 15,
@@ -279,7 +329,7 @@ const CharactersGenshin = [
     region: 'Snezhnaya',
     color: '#0071E9',
     image: TartagliaImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: TartagliaBackground
   },
   {
     id: 16,
@@ -293,7 +343,7 @@ const CharactersGenshin = [
     region: 'Mondstadt',
     color: '#EE1E1E',
     image: BennettImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: BennettBackground
   },
   {
     id: 17,
@@ -307,7 +357,7 @@ const CharactersGenshin = [
     region: 'Mondstadt',
     color: '#20C9A7',
     image: JeanImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: JeanBackground
   },
   {
     id: 18,
@@ -321,7 +371,7 @@ const CharactersGenshin = [
     region: 'Mondstadt',
     color: '#0071E9',
     image: BarbaraImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: BarbaraBackground
   },
   {
     id: 19,
@@ -335,7 +385,7 @@ const CharactersGenshin = [
     region: 'Mondstadt',
     color: '#2cbcc9',
     image: KaeyaImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: KaeyaBackground
   },
   {
     id: 20,
@@ -349,7 +399,7 @@ const CharactersGenshin = [
     region: 'Liyue',
     color: '#2cbcc9',
     image: ChongyunImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: ChongyunBackground
   },
   {
     id: 21,
@@ -363,7 +413,7 @@ const CharactersGenshin = [
     region: 'Mondstad',
     color: '#EE1E1E',
     image: KleeImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: KleeBackground
   },
   {
     id: 22,
@@ -377,7 +427,7 @@ const CharactersGenshin = [
     region: 'Inazuma',
     color: '#9B1BD1',
     image: KujouSaraImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: KujouSaraBackground
   },
   {
     id: 23,
@@ -391,7 +441,7 @@ const CharactersGenshin = [
     region: 'Mondstadt',
     color: '#9B1BD1',
     image: LisaImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: LisaBackground
   },
   {
     id: 24,
@@ -405,7 +455,7 @@ const CharactersGenshin = [
     region: 'Mondstadt',
     color: '#EE1E1E',
     image: DilucImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: DilucBackground
   },
   {
     id: 25,
@@ -419,7 +469,7 @@ const CharactersGenshin = [
     region: 'Liyue',
     color: '#FFB400',
     image: NingguangImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: NingguangBackground
   },
   {
     id: 26,
@@ -433,7 +483,7 @@ const CharactersGenshin = [
     region: 'Mondstadt',
     color: '#FFB400',
     image: NoelleImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: NoelleBackground
   },
   {
     id: 27,
@@ -447,7 +497,7 @@ const CharactersGenshin = [
     region: 'Liyue',
     color: '#2cbcc9',
     image: QiqiImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: QiqiBackground
   },
   {
     id: 28,
@@ -461,7 +511,7 @@ const CharactersGenshin = [
     region: 'Mondstadt',
     color: '#9B1BD1',
     image: FischlImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: FischlBackground
   },
   {
     id: 29,
@@ -475,7 +525,7 @@ const CharactersGenshin = [
     region: 'Mondstadt',
     color: '#9B1BD1',
     image: RazorImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: RazorBackground
   },
   {
     id: 30,
@@ -489,7 +539,7 @@ const CharactersGenshin = [
     region: 'Mondstadt',
     color: '#2cbcc9',
     image: RosariaImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: RosariaBackground
   },
   {
     id: 31,
@@ -503,7 +553,7 @@ const CharactersGenshin = [
     region: 'Inazuma',
     color: '#0071E9',
     image: SangonomiyaKokomiImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: SangonomiyaKokomiBackground
   },
   {
     id: 32,
@@ -517,7 +567,7 @@ const CharactersGenshin = [
     region: 'Inazuma',
     color: '#20C9A7',
     image: SayuImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: SayuBackground
   },
   {
     id: 33,
@@ -531,7 +581,7 @@ const CharactersGenshin = [
     region: 'Mondstadt',
     color: '#EE1E1E',
     image: AmberImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: AmberBackground
   },
   {
     id: 34,
@@ -545,7 +595,7 @@ const CharactersGenshin = [
     region: 'Mondstadt',
     color: '#20C9A7',
     image: SucroseImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: SucroseBackground
   },
   {
     id: 35,
@@ -559,7 +609,7 @@ const CharactersGenshin = [
     region: 'Inazuma',
     color: '#FFB400',
     image: GorouImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: GorouBackground
   },
   {
     id: 36,
@@ -573,7 +623,7 @@ const CharactersGenshin = [
     region: 'Inazuma',
     color: '#EE1E1E',
     image: ThomaImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: ThomaBackground
   },
   {
     id: 37,
@@ -587,7 +637,7 @@ const CharactersGenshin = [
     region: 'Mondstadt',
     color: '#20C9A7',
     image: VentiImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: VentiBackground
   },
   {
     id: 38,
@@ -601,7 +651,7 @@ const CharactersGenshin = [
     region: 'Liyue',
     color: '#EE1E1E',
     image: XianglingImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: XianglingBackground
   },
   {
     id: 39,
@@ -615,7 +665,7 @@ const CharactersGenshin = [
     region: 'Liyue',
     color: '#9B1BD1',
     image: BeidouImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: BeidouBackground
   },
   {
     id: 40,
@@ -629,7 +679,7 @@ const CharactersGenshin = [
     region: 'Liyue',
     color: '#0071E9',
     image: XingqiuImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: XingqiuBackground
   },
   {
     id: 41,
@@ -643,7 +693,7 @@ const CharactersGenshin = [
     region: 'Liyue',
     color: '#FFB400',
     image: YunJinImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: YunJinBackground
   },
   {
     id: 42,
@@ -657,7 +707,7 @@ const CharactersGenshin = [
     region: 'Liyue',
     color: '#EE1E1E',
     image: YanfeiImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: YanfeiBackground
   },
   {
     id: 43,
@@ -671,7 +721,7 @@ const CharactersGenshin = [
     region: 'Inazuma',
     color: '#FFB400',
     image: AratakiIttoImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: AratakiIttoBackground
   },
   {
     id: 44,
@@ -685,7 +735,7 @@ const CharactersGenshin = [
     region: 'Liyue',
     color: '#EE1E1E',
     image: XinyanImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: XinyanBackground
   },
   {
     id: 45,
@@ -699,7 +749,7 @@ const CharactersGenshin = [
     region: 'Liyue',
     color: '#FFB400',
     image: ZhongliImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: ZhongliBackground
   },
   {
     id: 46,
@@ -713,7 +763,7 @@ const CharactersGenshin = [
     region: 'Inazuma',
     color: '#0071E9',
     image: KamisatoAyatoImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: KamisatoAyatoBackground
   },
   {
     id: 47,
@@ -727,11 +777,11 @@ const CharactersGenshin = [
     region: 'Mondstadt',
     color: '#FFB400',
     image: AlbedoImage,
-    bgImage: KamisatoAyakaBackground
+    bgImage: AlbedoBackground
   },
   {
     id: 48,
-    name: 'Traveler',
+    name: 'Aether',
     gender: 'Masculino',
     constellation: '',
     vision: '',
@@ -740,8 +790,22 @@ const CharactersGenshin = [
     stars: 5,
     region: '',
     color: '#000000',
-    image: TravelerImage,
-    bgImage: KamisatoAyakaBackground
+    image: AetherImage,
+    bgImage: AetherBackground
+  },
+  {
+    id: 49,
+    name: 'Lumine',
+    gender: 'Feminino',
+    constellation: '',
+    vision: '',
+    weapon: 'Espada',
+    birthday: '',
+    stars: 5,
+    region: '',
+    color: '#000000',
+    image: LumineImage,
+    bgImage: LumineBackground
   }
 ]
 
