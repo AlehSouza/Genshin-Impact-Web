@@ -26,8 +26,9 @@ html, body{
 }
 nav {
   z-index: 1;
-  width: 100%;
   background-color: var(--white-color);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.1);
+  width: 100%;
   position: fixed;
   padding: 20px;
   a {
