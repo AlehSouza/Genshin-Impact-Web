@@ -39,6 +39,9 @@
               <b>Região: </b> {{ haveData(character.region) }}
             </span>
           </div>
+          <button @click="saveCharacter()">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Finger_heart.png/430px-Finger_heart.png"/>
+          </button>
         </div>
         <div class="footer-character" v-bind:style="{backgroundColor: character.color}"></div>
       </div>
@@ -47,17 +50,27 @@
 </template>
 
 <script>
-import CharactersGenshin from '../api/index'
+import CharactersGenshin from '@/api/index'
+import { setItem, getItem, removeItem } from '@/utils/LocalStorage/index'
 
 export default {
   data () {
     return {
-      character: []
+      character: [],
+      setItem
     }
   },
   methods: {
     haveData (property) {
       return property || 'Não há registros'
+    },
+    saveCharacter () {
+      const savedNames = getItem('Favs')
+      if (savedNames.includes(this.character.name)) {
+        removeItem('Favs', this.character.name)
+        return
+      }
+      setItem('Favs', this.character.name)
     }
   },
   beforeMount () {
@@ -119,7 +132,20 @@ export default {
   margin: auto;
   flex-direction: row;
   padding: 0px;
+  position: relative;
   display: flex;
+  button {
+    width: 50px;
+    height: 50px;
+    right: 0px;
+    position: absolute;
+    background-color: transparent;
+    border: 0px;
+    img {
+      width: 100%;
+      cursor: pointer;
+    }
+  }
 }
 
 .image-character{

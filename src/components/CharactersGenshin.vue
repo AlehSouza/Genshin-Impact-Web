@@ -11,7 +11,7 @@
           <option value="vision">Visão</option>
         </select>
       </div>
-      <h1>Personagens</h1>
+      <h1>{{ name }}</h1>
     </div>
     <div class="container-characters-genshin">
       <div class="character-item"
@@ -30,7 +30,6 @@
 </template>
 
 <script>
-import CharactersGenshin from '../api/index'
 import ModalCharacter from './ModalCharacter.vue'
 
 export default {
@@ -40,18 +39,26 @@ export default {
   data () {
     return {
       characters: [],
-      charactersDefault: CharactersGenshin,
+      charactersDefault: this.api,
       filterOption: ''
     }
   },
   props: {
+    api: {
+      type: Array,
+      required: true
+    },
     redirectToPage: {
       type: Function,
+      required: true
+    },
+    name: {
+      type: String,
       required: true
     }
   },
   mounted () {
-    CharactersGenshin.forEach(Character => {
+    this.api.forEach(Character => {
       this.characters.push(Character)
     })
   },
