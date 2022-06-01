@@ -7,6 +7,10 @@
           <h2>
             {{character.name}}
           </h2>
+          <button @click="saveCharacter()">
+            <img src="../assets/icons/star.png"/>
+            <span> {{ isFavorite }}</span>
+          </button>
         </div>
         <div class="introducion-character">
           <div class="image-character">
@@ -39,8 +43,14 @@
               <b>Região: </b> {{ haveData(character.region) }}
             </span>
           </div>
-          <button @click="saveCharacter()">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Finger_heart.png/430px-Finger_heart.png"/>
+
+        </div>
+        <div class="page-buttons">
+          <button @click="page('b')" :disabled="this.character.id - 1 < 0">
+            Voltar
+          </button>
+          <button @click="page('f')" :disabled="this.character.id + 1 >= maxPages">
+            Avançar
           </button>
         </div>
         <div class="footer-character" v-bind:style="{backgroundColor: character.color}"></div>
@@ -57,7 +67,9 @@ export default {
   data () {
     return {
       character: [],
-      setItem
+      isFavorite: '',
+      setItem,
+      maxPages: CharactersGenshin.length
     }
   },
   methods: {
@@ -68,13 +80,34 @@ export default {
       const savedNames = getItem('Favs')
       if (savedNames && savedNames.includes(this.character.name)) {
         removeItem('Favs', this.character.name)
+        this.isFavorite = 'Favoritar'
         return
       }
+      this.isFavorite = 'Desfavoritar'
       setItem('Favs', this.character.name)
+    },
+    verifyCharacter () {
+      const savedNames = getItem('Favs')
+      // includes verifica se name existe em Favs, ex: array[1, 2, 3].includes(2);  retorna = true
+      if (savedNames && savedNames.includes(this.character.name)) {
+        this.isFavorite = 'Desfavoritar'
+        return
+      }
+      this.isFavorite = 'Favoritar'
+    },
+    page (direction) {
+      if (direction === 'f') {
+        this.$router.push('/characterview/' + (this.character.id + 1))
+        location.reload()
+        return
+      }
+      this.$router.push('/characterview/' + (this.character.id - 1))
+      location.reload()
     }
   },
   beforeMount () {
     this.character = CharactersGenshin[(this.$route.params.id)]
+    this.verifyCharacter()
   }
 }
 </script>
@@ -92,7 +125,7 @@ export default {
 .container-bg-opacity {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 50px;
+  padding: 35px;
   align-items: center;
   justify-content: center;
   display: flex;
@@ -109,21 +142,39 @@ export default {
 }
 
 .header-character{
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   position: relative;
+  padding: 0px 30px;
   display: flex;
   h2{
     margin: 0px;
     padding: 10px;
     color: var(--white-color);
   }
+  /* Button Voltar */
   a{
-    position: absolute;
     text-decoration: none;
     left: 20px;
     top: 15px;
     font-weight: bold;
     color: var(--white-color);
+  }
+  /* Button Favorite */
+  button{
+    background-color: transparent;
+    border: 0px;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    cursor: pointer;
+    img{
+      width: 25px;
+    }
+    span{
+      color: var(--white-color);
+      font-weight: bold;
+    }
   }
 }
 
@@ -201,6 +252,26 @@ export default {
 
 .footer-character{
   height: 50px;
+}
+
+.page-buttons{
+  background-color: #c2c2c2;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: space-between;
+  display: flex;
+  bottom: 0px;
+  button {
+    width: 100%;
+    height: 50px;
+    border: 0px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+    &:hover{
+      background-color: #c2c2c2;
+    }
+  }
 }
 
 </style>

@@ -6,7 +6,6 @@ export function setItem (key, value) {
   } else {
     itemToStore = JSON.stringify([value])
   }
-  console.log(itemToStore)
   localStorage.setItem(key, itemToStore)
 }
 

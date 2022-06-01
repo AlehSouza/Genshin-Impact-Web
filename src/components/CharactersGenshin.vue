@@ -79,7 +79,6 @@ export default {
 @import '../styles/styles.scss';
 
 .container {
-  border-bottom: 35px solid var(--primary-color);
   h1 {
     margin: 0px;
     padding: 15px;
@@ -136,6 +135,9 @@ export default {
   display: flex;
 }
 
+.container-without-data{
+  color: black;
+}
 .character-item{
   overflow: hidden;
   margin: 15px;

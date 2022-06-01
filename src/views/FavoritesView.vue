@@ -35,6 +35,6 @@ export default {
 
 <style lang="scss" scoped>
 .container{
-    padding-top: 62px;
+    padding-top: 34px;
 }
 </style>
