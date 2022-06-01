@@ -66,7 +66,7 @@ export default {
     },
     saveCharacter () {
       const savedNames = getItem('Favs')
-      if (savedNames.includes(this.character.name)) {
+      if (savedNames && savedNames.includes(this.character.name)) {
         removeItem('Favs', this.character.name)
         return
       }

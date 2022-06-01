@@ -1,6 +1,11 @@
 export function setItem (key, value) {
   const savedItems = getItem(key)
-  const itemToStore = JSON.stringify(Array.from(new Set([value, ...savedItems])))
+  let itemToStore = []
+  if (savedItems) {
+    itemToStore = JSON.stringify(Array.from(new Set([value, ...savedItems])))
+  } else {
+    itemToStore = JSON.stringify([value])
+  }
   console.log(itemToStore)
   localStorage.setItem(key, itemToStore)
 }
