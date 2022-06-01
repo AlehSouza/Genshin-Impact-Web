@@ -27,6 +27,11 @@ const routes = [
     path: '/characterview/:id',
     name: 'characterview',
     component: () => import(/* webpackChunkName: "about" */ '../views/CharacterView.vue')
+  },
+  {
+    path: '/favorites',
+    name: 'favoriteview',
+    component: () => import(/* webpackChunkName: "about" */ '../views/FavoritesView.vue')
   }
 ]
 
