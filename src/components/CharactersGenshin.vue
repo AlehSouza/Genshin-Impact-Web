@@ -1,17 +1,19 @@
 <template>
   <div class="container">
-    <div class="characters-filter">
-      <div class="sub-characters-filter">
-        <h3>Filtro</h3>
-        <select v-on:change="changeFilter($event)">
-          <option value="id" selected>Nenhum</option>
-          <option value="name">Nome</option>
-          <option value="weapon">Arma</option>
-          <option value="gender">Gênero</option>
-          <option value="vision">Visão</option>
-        </select>
+    <div class="background-filter">
+      <div v-if="name" class="characters-filter">
+        <div class="sub-characters-filter">
+          <h3>Filtro</h3>
+          <select v-on:change="changeFilter($event)">
+            <option value="id" selected>Nenhum</option>
+            <option value="name">Nome</option>
+            <option value="weapon">Arma</option>
+            <option value="gender">Gênero</option>
+            <option value="vision">Visão</option>
+          </select>
+        </div>
+        <h1>{{ name }}</h1>
       </div>
-      <h1>{{ name }}</h1>
     </div>
     <div class="container-characters-genshin">
       <div class="character-item"
@@ -31,6 +33,7 @@
 
 <script>
 import ModalCharacter from './ModalCharacter.vue'
+import { redirectToPage } from '@/utils/Pages'
 
 export default {
   components: {
@@ -40,16 +43,13 @@ export default {
     return {
       characters: [],
       charactersDefault: this.api,
-      filterOption: ''
+      filterOption: '',
+      redirectToPage
     }
   },
   props: {
     api: {
       type: Array,
-      required: true
-    },
-    redirectToPage: {
-      type: Function,
       required: true
     },
     name: {
@@ -82,15 +82,17 @@ export default {
   h1 {
     margin: 0px;
     padding: 15px;
-    background-color: var(--primary-color);
     color: var(--white-color);
   }
 }
-
+.background-filter{
+  background-image: url('../assets/backgrounds/night_sky.webp');
+  background-size: cover;
+  background-position: center;
+}
 .characters-filter{
-  background-color: var(--primary-color);
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 8px;
-  margin-bottom: 15px;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -125,7 +127,6 @@ export default {
     }
   }
 }
-
 .container-characters-genshin{
   width: 93vw;
   padding: 25px 0px;
@@ -134,7 +135,6 @@ export default {
   flex-wrap: wrap;
   display: flex;
 }
-
 .container-without-data{
   color: black;
 }
@@ -149,6 +149,7 @@ export default {
   display: flex;
   span{
     padding: 12px;
+    font-weight: 400;
     color: var(--white-color);
   }
   img{
@@ -156,9 +157,4 @@ export default {
     cursor: pointer;
   }
 }
-
-span{
-  font-weight: bold;
-}
-
 </style>

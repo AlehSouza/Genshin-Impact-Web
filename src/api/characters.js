@@ -104,8 +104,6 @@ import {
   LumineBackground
 } from '../assets/background_characters'
 
-// #TODO add another background image for each character
-
 const CharactersGenshin = [
   {
     id: 0,
@@ -305,7 +303,7 @@ const CharactersGenshin = [
   },
   {
     id: 14,
-    name: 'Keqing - Rainha',
+    name: 'Keqing',
     gender: 'Feminino',
     constellation: 'Trulla Cementarii',
     vision: 'Electro',

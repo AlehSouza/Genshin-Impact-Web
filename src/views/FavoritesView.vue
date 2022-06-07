@@ -1,12 +1,21 @@
 <template>
   <div class="container">
-      <CharactersGenshin :api="favoritos" :redirect-to-page="redirectToPage" :name="msg"/>
+      <div class="favorites">
+        <CharactersGenshin :api="favoritos" :redirect-to-page="redirectToPage" :name="msg"/>
+        <div v-if="favoritos.length === 0">
+          <img src="../assets/images/qiqi.webp" width="240px">
+          <h3>Você ainda não tem nenhum personagem favorito :(</h3>
+        </div>
+      </div>
+      <FooterShared/>
   </div>
 </template>
 
 <script>
 import CharactersGenshin from '@/components/CharactersGenshin.vue'
-import ApiCharacters from '@/api/index'
+import FooterShared from '@/components/shared/FooterShared.vue'
+import { redirectToPage } from '@/utils/Pages'
+import ApiCharacters from '../api/characters'
 import { getItem } from '@/utils/LocalStorage/index'
 
 export default {
@@ -15,16 +24,13 @@ export default {
     return {
       msg: 'Favoritos',
       favoritos: [],
-      ApiCharacters
+      ApiCharacters,
+      redirectToPage
     }
   },
   components: {
-    CharactersGenshin
-  },
-  methods: {
-    redirectToPage (x) {
-      this.$router.push('/characterview/' + x)
-    }
+    CharactersGenshin,
+    FooterShared
   },
   beforeMount () {
     const savedNames = getItem('Favs')
@@ -35,6 +41,15 @@ export default {
 
 <style lang="scss" scoped>
 .container{
-    padding-top: 34px;
+  flex-direction: column;
+  display: flex;
+}
+.favorites{
+  h3{
+    font-weight: 500;
+  }
+  img{
+    padding-top: 50px;
+  }
 }
 </style>

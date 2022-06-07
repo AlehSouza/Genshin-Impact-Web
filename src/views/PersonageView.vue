@@ -3,7 +3,7 @@
     <div class="container-bg-opacity">
       <div class="container-character-view">
         <div class="header-character" v-bind:style="{backgroundColor: character.color}">
-          <a href="/"> Voltar</a>
+          <a @click="comeBack()"> Voltar</a>
           <h2>
             {{character.name}}
           </h2>
@@ -49,19 +49,21 @@
           <button @click="page('b')" :disabled="this.character.id - 1 < 0">
             Voltar
           </button>
-          <button @click="page('f')" :disabled="this.character.id + 1 >= maxPages">
+          <button @click="page('f')" :disabled="this.character.id + 1 >= maxPage">
             Avançar
           </button>
         </div>
         <div class="footer-character" v-bind:style="{backgroundColor: character.color}"></div>
       </div>
     </div>
+    <FooterShared/>
   </div>
 </template>
 
 <script>
-import CharactersGenshin from '@/api/index'
+import ApiCharacters from '@/api/characters'
 import { setItem, getItem, removeItem } from '@/utils/LocalStorage/index'
+import FooterShared from '@/components/shared/FooterShared.vue'
 
 export default {
   data () {
@@ -69,8 +71,11 @@ export default {
       character: [],
       isFavorite: '',
       setItem,
-      maxPages: CharactersGenshin.length
+      maxPage: ApiCharacters.length
     }
+  },
+  components: {
+    FooterShared
   },
   methods: {
     haveData (property) {
@@ -97,16 +102,20 @@ export default {
     },
     page (direction) {
       if (direction === 'f') {
-        this.$router.push('/characterview/' + (this.character.id + 1))
+        this.$router.push('/personage/' + (this.character.id + 1))
         location.reload()
         return
       }
-      this.$router.push('/characterview/' + (this.character.id - 1))
+      this.$router.push('/personage/' + (this.character.id - 1))
+      location.reload()
+    },
+    comeBack () {
+      this.$router.push('/characters/')
       location.reload()
     }
   },
   beforeMount () {
-    this.character = CharactersGenshin[(this.$route.params.id)]
+    this.character = ApiCharacters[(this.$route.params.id)]
     this.verifyCharacter()
   }
 }
@@ -116,9 +125,6 @@ export default {
 @import '../styles/styles.scss';
 
 .container-bg {
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
   background-size: cover;
 }
 
@@ -159,6 +165,7 @@ export default {
     top: 15px;
     font-weight: bold;
     color: var(--white-color);
+    cursor: pointer;
   }
   /* Button Favorite */
   button{

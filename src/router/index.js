@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 
 Vue.use(VueRouter)
 
@@ -8,14 +7,14 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/HomeView.vue')
   },
   {
     path: '/about',
     name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
   },
   {
@@ -24,19 +23,31 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/MapView.vue')
   },
   {
-    path: '/characterview/:id',
-    name: 'characterview',
-    component: () => import(/* webpackChunkName: "about" */ '../views/CharacterView.vue')
+    path: '/personage/:id',
+    name: 'personage',
+    component: () => import(/* webpackChunkName: "about" */ '../views/PersonageView.vue')
   },
   {
     path: '/favorites',
-    name: 'favoriteview',
+    name: 'favorite',
     component: () => import(/* webpackChunkName: "about" */ '../views/FavoritesView.vue')
+  },
+  {
+    path: '/regions',
+    name: 'regions',
+    component: () => import(/* webpackChunkName: "about" */ '../views/RegionsView.vue')
+  },
+  {
+    path: '/characters',
+    name: 'characters',
+    component: () => import(/* webpackChunkName: "about" */ '../views/CharactersView.vue')
   }
 ]
 
 const router = new VueRouter({
-  routes
+  routes,
+  scrollBehavior: (to, from, savedPosition) => {
+    return { x: 0, y: 0 }
+  }
 })
-
 export default router

@@ -24,11 +24,13 @@
 </template>
 
 <script>
+import { redirectToPage } from '@/utils/Pages'
 
 export default {
   data () {
     return {
-      isOpen: false
+      isOpen: false,
+      redirectToPage
     }
   },
   props: {
@@ -47,9 +49,6 @@ export default {
         document.getElementById('modal' + character.id).style.display = 'none'
         document.getElementById('app').style.overflow = 'auto'
       }
-    },
-    redirectToPage (x) {
-      this.$router.push('/characterview/' + x)
     },
     haveData (property) {
       return property || 'Não há registros'

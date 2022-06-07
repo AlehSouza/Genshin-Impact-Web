@@ -1,40 +1,39 @@
 <template>
   <div class="home">
     <HeaderHome :redirect-to-page="redirectToPage"/>
-    <CharactersGenshin :api="ApiGenshin" :redirect-to-page="redirectToPage" :name="msg"/>
+    <AboutHome/>
+    <CategoriesHome/>
+    <FooterShared/>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import CharactersGenshin from '@/components/CharactersGenshin.vue'
-import ApiGenshin from '@/api/index'
 import HeaderHome from '@/components/HeaderHome.vue'
+import AboutHome from '@/components/AboutHome.vue'
+import CategoriesHome from '@/components/CategoriesHome.vue'
+import FooterShared from '@/components/shared/FooterShared.vue'
+import { redirectToPage } from '@/utils/Pages'
 
 export default {
   name: 'HomeView',
   data () {
     return {
-      ApiGenshin,
-      msg: 'Personagens'
+      redirectToPage
     }
   },
   components: {
     HeaderHome,
-    CharactersGenshin
-  },
-  methods: {
-    redirectToPage (x) {
-      this.$router.push('/characterview/' + x)
-    }
+    AboutHome,
+    CategoriesHome,
+    FooterShared
   }
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 @import '../styles/styles.scss';
 
- .home{
-   margin: auto;
- }
+.home{
+  margin: auto;
+}
 </style>

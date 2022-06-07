@@ -2,7 +2,8 @@
   <div class="header-container">
     <div class="header-subcontainer">
       <div class="wrapper">
-        <h1>Genshin Impact</h1>
+        <!-- <h1>Genshin Impact</h1> -->
+        <img src="../assets/images/genshin_Impact_logo.png" alt="">
         <span>Busque por um personagem</span>
         <div class="search-container">
           <input
@@ -12,7 +13,7 @@
             v-on:keyup.enter="getIdByName(search)"
           >
           <button @click="getIdByName(search)">
-            <img src="../assets/icons/search.png"/>
+            <img class="search-icon" src="../assets/icons/search.png"/>
           </button>
         </div>
         <div class="search-error" v-if="invalidCharacter">
@@ -24,7 +25,7 @@
 </template>
 
 <script>
-import CharactersGenshin from '../api/index'
+import ApiCharacters from '../api/characters'
 
 export default {
   data () {
@@ -42,7 +43,7 @@ export default {
   methods: {
     getIdByName (name) {
       this.invalidCharacter = ''
-      CharactersGenshin.forEach(Character => {
+      ApiCharacters.forEach(Character => {
         if (Character.name.toUpperCase() === name.toUpperCase()) {
           this.redirectToPage(Character.id)
         }
@@ -58,7 +59,7 @@ export default {
 
 .header-container{
   width: 100vw;
-  height: 600px;
+  height: 650px;
   background-image: url('../assets/backgrounds/bg_lumine_xiangling.webp');
   background-size: cover;
   background-position: center;
@@ -76,24 +77,30 @@ export default {
 .wrapper{
   width: 70vw;
   max-width: 650px;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   display: flex;
-  h1 {
+  /* h1 {
     color: var(--white-color);
     font-size: 65px;
     margin: 0px;
     padding: 0px;
+  } */
+  img{
+    width: 500px;
+    filter:invert(100);
   }
   span {
     font-size: 20px;
     padding: 30px 15px;
-    padding-top: 0px;
-    font-weight: bold;
+    font-weight: 450;
     color: var(--white-color);
   }
 }
 
 .search-container{
+  width: 33vw;
   border-radius: 50px;
   background-color: var(--white-color);
   overflow: hidden;
@@ -121,7 +128,9 @@ export default {
     }
   }
 }
-
+.search-icon{
+  filter:invert(0);
+}
 .search-error {
   justify-content: center;
   align-items: center;
