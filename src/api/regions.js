@@ -2,8 +2,9 @@ import {
   MondstadRegion,
   LiyueRegion,
   DespenhadeiroRegion,
-  Inazuma,
-  Enkanomiya,
+  InazumaRegion,
+  EnkanomiyaRegion,
+  SumeruRegion,
   BuleRegion
 } from '../assets/background_regions'
 
@@ -29,13 +30,19 @@ const regions = [
   {
     name: 'Inazuma',
     desc: '',
-    bgImage: Inazuma,
+    bgImage: InazumaRegion,
     images: ['', '', '', '', '']
   },
   {
     name: 'Enkanomiya',
     desc: '',
-    bgImage: Enkanomiya,
+    bgImage: EnkanomiyaRegion,
+    images: ['', '', '', '', '']
+  },
+  {
+    name: 'Sumeru',
+    desc: '',
+    bgImage: SumeruRegion,
     images: ['', '', '', '', '']
   },
   {

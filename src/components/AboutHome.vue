@@ -1,14 +1,14 @@
 <template>
   <div class="container">
     <div class="first-wrapper">
-      <div class="about-images">
+      <!-- <div class="about-images">
         <div class="about-image-item box-1">
         </div>
         <div class="about-image-item box-2">
         </div>
         <div class="about-image-item box-3">
         </div>
-      </div>
+      </div> -->
       <div class="about-text">
         <h1>Olá Viajante!</h1>
         <p>
@@ -21,10 +21,6 @@
       </div>
     </div>
     <hr class="hr"/>
-    <div class="second-wrapp">
-      <!-- #TODO Adiconar um wrapp com duas opções personages/regiões -->
-      <!-- #TODO Adicionar um componente para envio de email com sugestões numa caixa de email pra sla, GenshinImpact-AlehSouza@gmail.com? -->
-    </div>
   </div>
 </template>
 
@@ -53,6 +49,7 @@ export default {
 .first-wrapper{
   width: 70vw;
   justify-content: space-between;
+  justify-content: center;
   align-items: center;
   display: flex;
 }
@@ -97,12 +94,9 @@ export default {
 .about-text{
   width: 650px;
   position: relative;
+  text-align: center;
   h1{
     font-weight: 500;
-    text-align: left;
-  }
-  p{
-    text-align: left;
   }
   img{
     margin-top: 35px;

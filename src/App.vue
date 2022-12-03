@@ -4,7 +4,6 @@
       <router-link to="/">Home</router-link>
       <router-link to="/characters">Personagens</router-link>
       <router-link to="/regions">Regiões</router-link>
-      <router-link to="/favorites">Favoritos</router-link>
       <router-link to="/map">Mapa</router-link>
       <router-link to="/about">About</router-link>
     </nav>

@@ -25,13 +25,14 @@
 </template>
 
 <script>
-import ApiCharacters from '../api/characters'
+import axios from 'axios'
 
 export default {
   data () {
     return {
       search: '',
-      invalidCharacter: ''
+      invalidCharacter: '',
+      characters: []
     }
   },
   props: {
@@ -40,15 +41,27 @@ export default {
       required: true
     }
   },
+  beforeMount () {
+    this.getCharacters()
+  },
   methods: {
     getIdByName (name) {
       this.invalidCharacter = ''
-      ApiCharacters.forEach(Character => {
+      this.characters.forEach(Character => {
         if (Character.name.toUpperCase() === name.toUpperCase()) {
-          this.redirectToPage(Character.id)
+          this.redirectToPage(Character._id)
         }
       })
       this.invalidCharacter = true
+    },
+    getCharacters () {
+      axios.get('https://genshin-impact-api.vercel.app/characters').then(resp => {
+        this.characters = resp.data
+      }).catch((err) => {
+        console.log(`Houve um problema... ${err}`)
+      }).finally(() => {
+        this.loading = false
+      })
     }
   }
 }

@@ -1,5 +1,5 @@
 export function redirectToPage (id) {
-  this.$router.push('/personage/' + id)
+  this.$router.push('/character/' + id)
 }
 
 export default {

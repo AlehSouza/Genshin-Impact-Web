@@ -15,40 +15,39 @@
         <h1>{{ name }}</h1>
       </div>
     </div>
-    <div class="container-characters-genshin">
+    <loading-component v-if="loading"/>
+    <div v-else class="container-characters-genshin">
       <div class="character-item"
-          v-for="(character, i) in characters"
-          v-bind:key="i"
-          v-bind:style="{backgroundColor: character.color}
-      ">
+          v-for="(item, index) in charactersData"
+          v-bind:key="index"
+          v-bind:style="{backgroundColor: item.color}"
+      >
         <span>
-          {{character.name}}
+          {{ item.name }}
         </span>
-        <img @click="redirectToPage(character.id)" :src="character.image" :alt="character.name" srcset="">
-        <ModalCharacter :character="character"/>
+        <img @click="redirectToPage(item._id)" :src="item.image" :alt="item.name" srcset="">
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import ModalCharacter from './ModalCharacter.vue'
 import { redirectToPage } from '@/utils/Pages'
+import LoadingComponent from './LoadingComponent.vue'
 
 export default {
   components: {
-    ModalCharacter
+    LoadingComponent
   },
   data () {
     return {
-      characters: [],
-      charactersDefault: this.api,
+      loading: true,
       filterOption: '',
       redirectToPage
     }
   },
   props: {
-    api: {
+    charactersData: {
       type: Array,
       required: true
     },
@@ -57,19 +56,21 @@ export default {
       required: true
     }
   },
-  mounted () {
-    this.api.forEach(Character => {
-      this.characters.push(Character)
-    })
-  },
   methods: {
     changeFilter (e) {
       this.filterOption = e.target.options[e.target.options.selectedIndex].value
       if (this.filterOption === 'id') {
-        this.characters.sort((a, b) => a.id.toString().localeCompare(b.id))
+        // eslint-disable-next-line vue/no-mutating-props
+        this.charactersData.sort((a, b) => a._id.toString().localeCompare(b._id))
         return
       }
-      this.characters.sort((a, b) => a[e.target.value].localeCompare(b[e.target.value]))
+      // eslint-disable-next-line vue/no-mutating-props
+      this.charactersData.sort((a, b) => a[e.target.value].localeCompare(b[e.target.value]))
+    }
+  },
+  watch: {
+    charactersData () {
+      this.loading = false
     }
   }
 }

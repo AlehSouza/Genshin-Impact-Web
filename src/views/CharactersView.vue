@@ -1,28 +1,42 @@
 <template>
   <div>
     <div class="container">
-      <CharactersGenshin :api="ApiCharacters" :name="msg"/>
+      <CharactersGenshin :charactersData="characters" :name="msg"/>
       <FooterShared/>
     </div>
   </div>
 </template>
 
 <script>
+import axios from 'axios'
 import CharactersGenshin from '@/components/CharactersGenshin.vue'
-import ApiCharacters from '@/api/characters'
 import FooterShared from '@/components/shared/FooterShared.vue'
 
 export default {
   name: 'CharactersView',
   data () {
     return {
-      ApiCharacters,
-      msg: 'Personagens'
+      msg: 'Personagens',
+      characters: []
     }
   },
   components: {
     CharactersGenshin,
     FooterShared
+  },
+  beforeMount () {
+    this.getCharacters()
+  },
+  methods: {
+    getCharacters () {
+      axios.get('https://genshin-impact-api.vercel.app/characters').then(resp => {
+        this.characters = resp.data
+      }).catch((err) => {
+        console.log(`Houve um problema... ${err}`)
+      }).finally(() => {
+        this.loading = false
+      })
+    }
   }
 }
 </script>

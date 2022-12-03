@@ -23,14 +23,9 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/MapView.vue')
   },
   {
-    path: '/personage/:id',
-    name: 'personage',
-    component: () => import(/* webpackChunkName: "about" */ '../views/PersonageView.vue')
-  },
-  {
-    path: '/favorites',
-    name: 'favorite',
-    component: () => import(/* webpackChunkName: "about" */ '../views/FavoritesView.vue')
+    path: '/character/:id',
+    name: 'character',
+    component: () => import(/* webpackChunkName: "about" */ '../views/CharacterView.vue')
   },
   {
     path: '/regions',
