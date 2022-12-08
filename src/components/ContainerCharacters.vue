@@ -17,16 +17,7 @@
     </div>
     <loading-component v-if="loading"/>
     <div v-else class="container-characters-genshin">
-      <div class="character-item"
-          v-for="(item, index) in charactersData"
-          v-bind:key="index"
-          v-bind:style="{backgroundColor: item.color}"
-      >
-        <span>
-          {{ item.name }}
-        </span>
-        <img @click="redirectToPage(item._id)" :src="item.image" :alt="item.name" srcset="">
-      </div>
+      <character-item v-for="(item, index) in charactersData" v-bind:key="index" :character="item"/>
     </div>
   </div>
 </template>
@@ -34,10 +25,12 @@
 <script>
 import { redirectToPage } from '@/utils/Pages'
 import LoadingComponent from './LoadingComponent.vue'
+import CharacterItem from './CharacterItem.vue'
 
 export default {
   components: {
-    LoadingComponent
+    LoadingComponent,
+    CharacterItem
   },
   data () {
     return {
@@ -97,7 +90,6 @@ export default {
   justify-content: center;
   align-items: center;
   display: flex;
-
   .sub-characters-filter{
     position: absolute;
     left: 10vw;
@@ -129,33 +121,11 @@ export default {
   }
 }
 .container-characters-genshin{
-  width: 93vw;
+  width: 90vw;
   padding: 25px 0px;
   margin: auto;
   justify-content: center;
   flex-wrap: wrap;
   display: flex;
-}
-.container-without-data{
-  color: black;
-}
-.character-item{
-  overflow: hidden;
-  margin: 15px;
-  border-radius: 5px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  span{
-    padding: 12px;
-    font-weight: 400;
-    color: var(--white-color);
-  }
-  img{
-    width: 200px;
-    cursor: pointer;
-  }
 }
 </style>

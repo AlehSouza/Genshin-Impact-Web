@@ -18,6 +18,11 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
   },
   {
+    path: '/GenshinImpact',
+    name: 'about',
+    component: () => import(/* webpackChunkName: "about" */ '../views/AboutGenshinView.vue')
+  },
+  {
     path: '/map',
     name: 'map',
     component: () => import(/* webpackChunkName: "about" */ '../views/MapView.vue')

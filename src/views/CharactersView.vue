@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="container">
-      <CharactersGenshin :charactersData="characters" :name="msg"/>
+      <ContainerCharacters :charactersData="characters" :name="msg"/>
       <FooterShared/>
     </div>
   </div>
@@ -9,7 +9,7 @@
 
 <script>
 import axios from 'axios'
-import CharactersGenshin from '@/components/CharactersGenshin.vue'
+import ContainerCharacters from '@/components/ContainerCharacters.vue'
 import FooterShared from '@/components/shared/FooterShared.vue'
 
 export default {
@@ -21,7 +21,7 @@ export default {
     }
   },
   components: {
-    CharactersGenshin,
+    ContainerCharacters,
     FooterShared
   },
   beforeMount () {

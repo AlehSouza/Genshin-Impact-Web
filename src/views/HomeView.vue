@@ -1,7 +1,9 @@
 <template>
   <div class="home">
     <HeaderHome :redirect-to-page="redirectToPage"/>
-    <AboutHome/>
+    <BreakLine/>
+    <IntroduceHome/>
+    <BreakLine/>
     <CategoriesHome/>
     <FooterShared/>
   </div>
@@ -9,10 +11,11 @@
 
 <script>
 import HeaderHome from '@/components/HeaderHome.vue'
-import AboutHome from '@/components/AboutHome.vue'
+import IntroduceHome from '@/components/IntroduceHome.vue'
 import CategoriesHome from '@/components/CategoriesHome.vue'
 import FooterShared from '@/components/shared/FooterShared.vue'
 import { redirectToPage } from '@/utils/Pages'
+import BreakLine from '@/components/shared/BreakLine.vue'
 
 export default {
   name: 'HomeView',
@@ -23,9 +26,10 @@ export default {
   },
   components: {
     HeaderHome,
-    AboutHome,
+    IntroduceHome,
     CategoriesHome,
-    FooterShared
+    FooterShared,
+    BreakLine
   }
 }
 </script>
