@@ -1,9 +1,7 @@
 <template>
-  <div>
-    <div class="container">
-      <ContainerCharacters :charactersData="characters" :name="msg"/>
-      <FooterShared/>
-    </div>
+  <div class="container">
+    <ContainerCharacters :charactersData="characters" :name="msg"/>
+    <FooterShared/>
   </div>
 </template>
 

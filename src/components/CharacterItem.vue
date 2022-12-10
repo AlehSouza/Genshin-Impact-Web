@@ -46,8 +46,8 @@ export default {
     height: 450px;
     margin: 15px;
     border-radius: 8px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     background-size: cover;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     flex-direction: column-reverse;
     align-items: flex-end;
     display: flex;

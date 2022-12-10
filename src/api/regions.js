@@ -4,8 +4,7 @@ import {
   DespenhadeiroRegion,
   InazumaRegion,
   EnkanomiyaRegion,
-  SumeruRegion,
-  BuleRegion
+  SumeruRegion
 } from '../assets/background_regions'
 
 const regions = [
@@ -43,12 +42,6 @@ const regions = [
     name: 'Sumeru',
     desc: '',
     bgImage: SumeruRegion,
-    images: ['', '', '', '', '']
-  },
-  {
-    name: 'Bule de relachá',
-    desc: '',
-    bgImage: BuleRegion,
     images: ['', '', '', '', '']
   }
 ]
