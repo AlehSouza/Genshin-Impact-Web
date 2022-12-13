@@ -1,74 +1,84 @@
 <template>
   <div class="container">
+    <div class="item">
       <router-link to="/characters">
-        <div class="characters-opacity">
-          <h1>Personagens</h1>
-        </div>
+        <h1>Personagens</h1>
       </router-link>
+    </div>
+    <div class="item">
       <router-link to="/regions">
-        <div class="regions-opacity">
-          <h1>Regiões</h1>
-        </div>
+        <h1>Regiões</h1>
       </router-link>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-
+  data () {
+    return {
+      name: 'asd'
+    }
+  }
 }
 </script>
 
 <style lang="scss" scoped>
-@import '../styles/styles.scss';
-
-.container{
-  height: 450px;
-  display: flex;
-  a{
-    transition: all 1s;
-    color: white;
-    background-image: url('../assets/images/characters.webp');
-    background-size: 100%;
-    background-position: center;
+  .container {
+    width: 70%;
+    height: 430px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+  }
+  .item {
     width: 50%;
-    text-decoration: none;
-    &:nth-child(2){
-      background-image: url('https://arenaesports.com.br/wp-content/uploads/2022/03/area-despenhadeiro-genshin-impact.jpg');
-    }
-    &:hover{
-      background-size: 130%;
-      h1{
-        transition: all 1s;
-        transform: scale(1.2);
+    height: 100%;
+    margin: 1%;
+    border-radius: 8px;
+    overflow: hidden;
+    background-image: url('../assets/images/characters.webp');
+    background-size: cover;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.1);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    a {
+      letter-spacing: 1px;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      text-decoration: none;
+      align-items: center;
+      display: flex;
+      transition: 0.5s;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.7);
+      }
+      h1 {
+        font-size: 200%;
+        font-weight: 500;
+        color: white;
       }
     }
+    &:last-child {
+      background-image: url('../assets/images/regions.jpg');
+    }
   }
-}
-.characters-opacity{
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  justify-content: right;
-  align-items: flex-end;
-  display: flex;
-}
-.regions-opacity{
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  justify-content: left;
-  align-items: flex-start;
-  display: flex;
-}
-.characters-opacity, .regions-opacity {
-  h1{
-    color: white;
-    font-size: 50px;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    padding: 30px 50px;
-    margin: 0px;
+
+  @media screen and (max-width: 950px ) {
+    .container {
+      flex-direction: column;
+    }
+    .item {
+      width: 100%;
+    }
   }
-}
+
 </style>

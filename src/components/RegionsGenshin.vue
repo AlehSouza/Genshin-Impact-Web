@@ -1,8 +1,5 @@
 <template>
   <div>
-    <div class="header-regions">
-
-    </div>
     <div class="container-regions">
       <div
           class="region" v-for="(region, i) in ApiRegions"

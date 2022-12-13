@@ -8,7 +8,7 @@
         </div>
       </div>
     </div>
-    <img class="paimon" src="../assets/images/paimon.webp" alt="Paimon">
+    <!-- <img class="paimon" src="../assets/images/paimon.webp" alt="Paimon"> -->
   </div>
 </template>
 
@@ -32,7 +32,7 @@ export default {
   background-size: cover;
   background-position: center;
   overflow: hidden;
-  height: 650px;
+  height: 550px;
 }
 .introduction-regions-opacity{
   background-color: rgba(0, 0, 0, 0.5);
@@ -47,11 +47,12 @@ export default {
   padding: 40px;
   padding-top: 100px;
   justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
   display: flex;
   img{
     filter:invert(100);
+    max-width: 550px;
   }
   p{
     width: 600px;
@@ -61,7 +62,17 @@ export default {
   }
   h1{
     color: var(--white-color);
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
+    font-weight: 650;
+  }
+}
+
+@media screen and (max-width: 1250px ) {
+  .header {
+    width: 80%;
+    img {
+      width: 100%;
+    }
   }
 }
 </style>

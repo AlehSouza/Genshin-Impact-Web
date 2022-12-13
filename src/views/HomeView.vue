@@ -1,10 +1,11 @@
 <template>
   <div class="home">
     <HeaderHome :redirect-to-page="redirectToPage"/>
-    <BreakLine/>
     <IntroduceHome/>
     <BreakLine/>
+    <h1>Explore</h1>
     <CategoriesHome/>
+    <BreakLine/>
     <FooterShared/>
   </div>
 </template>
@@ -39,5 +40,9 @@ export default {
 
 .home{
   margin: auto;
+}
+h1 {
+  font-weight: 600;
+  padding: 15px 50px;
 }
 </style>

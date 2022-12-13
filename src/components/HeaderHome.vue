@@ -2,7 +2,6 @@
   <div class="header-container">
     <div class="header-subcontainer">
       <div class="wrapper">
-        <!-- <h1>Genshin Impact</h1> -->
         <img src="../assets/images/genshin_Impact_logo.png" alt="">
         <span>Busque por um personagem</span>
         <div class="search-container">
@@ -152,6 +151,20 @@ export default {
     color: var(--red-color);
     padding: 20px;
     font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 1250px ) {
+  .wrapper {
+    width: 85vw;
+    max-width: unset;
+    img {
+      width: 100%;
+      max-width: 500px;
+    }
+  }
+  .search-container {
+    width: 100%;
   }
 }
 

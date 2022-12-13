@@ -18,7 +18,7 @@
       </div>
     </div>
     <div class="right-wrapper">
-      <img src="../assets/backgrounds/bennet.png" alt="">
+      <img src="../assets/images/paimon.webp" alt="">
     </div>
   </div>
 </template>
@@ -38,8 +38,7 @@ export default {
 @import '../styles/styles.scss';
 
 .container{
-  padding: 0px 100px;
-  padding-top: 50px;
+  padding: 50px;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -109,12 +108,12 @@ export default {
   }
 }
 .right-wrapper{
-  width: 40%;
+  width: 20%;
   height: 500px;
-  align-items: flex-end;
+  justify-content: center;
   display: flex;
   img {
-    width: 90%;
+    height: 100%;
   }
 }
 
@@ -132,35 +131,9 @@ export default {
       width: 80%
     }
     img {
-      width: 100%;
-    }
-  }
-  .right-wrapper {
-    height: 40vh;
-    justify-content: flex-start;
-    align-items: flex-start;
-    display: flex;
-    padding-left: 55vw;
-    overflow: hidden;
-    img {
-      transform: scale(-1, 1);
-      width: 80%;
+      height: 100%;
     }
   }
 }
 
-@media screen and (max-width: 950px ) {
-  .right-wrapper {
-    height: 40vh;
-    justify-content: flex-start;
-    align-items: flex-start;
-    display: flex;
-    padding-left: 45vw;
-    overflow: hidden;
-    img {
-      transform: scale(-1, 1);
-      width: 100%;
-    }
-  }
-}
 </style>

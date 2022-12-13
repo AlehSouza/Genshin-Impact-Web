@@ -3,9 +3,9 @@
     <div class="background-filter">
       <div v-if="name" class="characters-filter">
         <div class="sub-characters-filter">
-          <h3>Filtro</h3>
           <select v-on:change="changeFilter($event)">
-            <option value="id" selected>Nenhum</option>
+            <option value="" selected disabled hidden>Filtro</option>
+            <option value="id">Nenhum</option>
             <option value="name">Nome</option>
             <option value="weapon">Arma</option>
             <option value="gender">Gênero</option>
@@ -85,8 +85,8 @@ export default {
   background-position: center;
 }
 .characters-filter{
-  background-color: rgba(0, 0, 0, 0.5);
   padding: 8px;
+  background-color: rgba(0, 0, 0, 0.5);
   justify-content: center;
   align-items: center;
   display: flex;
@@ -127,5 +127,22 @@ export default {
   justify-content: center;
   flex-wrap: wrap;
   display: flex;
+}
+
+@media screen and (max-width: 1250px ){
+  .background-filter {
+    flex-direction: column;
+  }
+  .characters-filter {
+    padding-bottom: 25px;
+    flex-direction: column-reverse;
+    .sub-characters-filter {
+      width: 90%;
+      position: static;
+      select {
+        width: 100%;
+      }
+    }
+  }
 }
 </style>

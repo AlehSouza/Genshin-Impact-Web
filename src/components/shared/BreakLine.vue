@@ -3,7 +3,7 @@
 </template>
 <style>
 .break-line{
-  width: 50%;
+  width: 78%;
   height: 2px;
   background-color: rgba(216, 216, 216, 0.3);
   border-radius: 50px;
