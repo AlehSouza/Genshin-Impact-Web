@@ -239,4 +239,25 @@ export default {
     }
   }
 }
+
+@media screen and (max-width: 1250px ) {
+  .float-btn {
+    color: white;
+    padding: 20px;
+    top: 66px;
+    left: 20px;
+  }
+  .container-bg-opacity{
+    flex-direction: column;
+    padding: 30px 0px;
+    height: auto;
+  }
+  .image-character {
+    width: 88%;
+    max-width: 480px;
+    height: 200px;
+    margin-bottom: 20px;
+    background-position: 0px -80px;
+  }
+}
 </style>

@@ -25,7 +25,7 @@ export default {
 
 <style lang="scss" scoped>
   .container {
-    width: 70%;
+    width: 89%;
     height: 430px;
     margin: 0 auto;
     padding: 20px;
@@ -52,7 +52,7 @@ export default {
       letter-spacing: 1px;
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(0, 0, 0, 0.6);
       justify-content: center;
       text-decoration: none;
       align-items: center;

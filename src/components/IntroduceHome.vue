@@ -134,6 +134,15 @@ export default {
       height: 100%;
     }
   }
+
+  .left-wrapper {
+    h1 {
+      width: 90%;
+    }
+  }
+  .right-wrapper {
+    display: none;
+  }
 }
 
 </style>
