@@ -17,7 +17,6 @@ export default {
 @import '../../styles/styles.scss';
 
 .container{
-  height: 300px;
   background-image: url("../../assets/backgrounds/night_sky.webp");
   background-size: cover;
   background-position: center;

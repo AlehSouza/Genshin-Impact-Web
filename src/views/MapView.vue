@@ -21,13 +21,14 @@ export default {
 @import '../styles/styles.scss';
 
 .home{
+  flex-direction: column;
+  display: flex;
   span{
     top: 0px;
     right: 0px;
     z-index: 2;
     padding: 20px;
     color: black;
-    position: fixed;
   }
 }
 </style>
